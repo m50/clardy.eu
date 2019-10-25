@@ -1,5 +1,5 @@
 @if (!isset($git))
-    @inject ('git', 'App\Services\GithubApi.php')
+    @inject ('git', 'App\Services\GithubApi')
 @endif
 <span class="text-gray-600">Earliest Date: {{ $gitData['earliest_date']->toDateString() }}</span>
 <span class="text-gray-600 float-right">Latest Date: {{ $gitData['latest_date']->toDateString() }}</span>
