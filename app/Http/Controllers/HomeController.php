@@ -4,53 +4,20 @@ namespace App\Http\Controllers;
 
 use App\Services\GithubApi;
 use App\Services\GitlabApi;
+use Illuminate\Support\Facades\Cache;
 
 class HomeController extends Controller
 {
-    protected $gl;
-    protected $gh;
-
-    public function __construct(GitlabApi $gl, GithubApi $gh)
-    {
-        $this->gl = $gl;
-        $this->gh = $gh;
-    }
     public function __invoke()
     {
-        $gl = $this->gl->getEventCountsByDay();
-        $gh = $this->gh->getCommitCountsByDay();
+        $data = Cache::get('git-contrib-data', [
+            'data' => collect([1=>[], 2 => [], 3 => [], 4 => [], 5 => [], 6 => [], 7 => []]),
+            'earliest_date' => now()->subMonths(12),
+            'latest_date' => now()
+        ]);
 
         return view('welcome', [
-            'data' => $this->mergeData($gl, $gh),
-            'git' => $this->gl
+            'data' => $data,
         ]);
-    }
-
-    private function mergeData(array $one, array $two): array
-    {
-
-        $allEvents = collect();
-        for ($day = 1; $day <= 7; $day++) {
-            $k = collect();
-            foreach ($one['data'][$day] as $date => $obj) {
-                if (isset($two['data'][$day][$date])) {
-                    $obj['count'] += $two['data'][$day][$date]['count'];
-                }
-                $k[$date] = $obj;
-            }
-            foreach ($two['data'][$day] as $date => $obj) {
-                if (isset($k[$date])) {
-                    continue;
-                }
-                $k[$date] = $obj;
-            }
-
-            $allEvents[$day] = $k;
-        }
-        return [
-            'data' => $allEvents,
-            'earliest_date' => $one['earliest_date'],
-            'latest_date' => $one['latest_date']
-        ];
     }
 }
