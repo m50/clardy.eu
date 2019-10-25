@@ -4,8 +4,9 @@ namespace App\Services;
 
 use Carbon\Carbon;
 use GuzzleHttp\Client;
+use Illuminate\Contracts\Support\Arrayable;
 
-class GitlabApi
+class GitlabApi implements Arrayable
 {
     /**
      * $guzzle
@@ -42,9 +43,9 @@ class GitlabApi
     public function __construct(string $url = null, string $key = null)
     {
         $this->guzzle = new Client([
-            'base_uri' => $url ?? config('services.gitlab.url'),
+            'base_uri' => $url ?? config('contrib-calendar.gitlab.url'),
             'headers' => [
-                'PRIVATE-TOKEN' => $key ?? config('services.gitlab.key'),
+                'PRIVATE-TOKEN' => $key ?? config('contrib-calendar.gitlab.key'),
                 'Accept' => 'application/json'
             ]
         ]);
@@ -132,5 +133,36 @@ class GitlabApi
             return $this->responseHeaders ?? collect();
         }
         return $this->$name;
+    }
+
+    /**
+     * toArray
+     *
+     * @return array
+     */
+    public function toArray()
+    {
+        return $this->getEventCountsByDay();
+    }
+
+    /**
+     * determineHeatmapColour
+     *
+     * @param int $count
+     * @return string
+     */
+    public function determineHeatmapColour($count): string
+    {
+        $heatmapClass = config('contrib-calendar.heatmap-class.zero', 'bg-gray-300');
+        if ($count >= 1 && $count < 9) {
+            $heatmapClass = config('contrib-calendar.heatmap-class.low', 'bg-blue-200');
+        } elseif ($count >= 10 && $count < 19) {
+            $heatmapClass = config('contrib-calendar.heatmap-class.medium', 'bg-blue-400');
+        } elseif ($count >= 20 && $count < 29) {
+            $heatmapClass = config('contrib-calendar.heatmap-class.high', 'bg-blue-600');
+        } elseif ($count >= 30) {
+            $heatmapClass = config('contrib-calendar.heatmap-class.very-high', 'bg-blue-800');
+        }
+        return $heatmapClass;
     }
 }

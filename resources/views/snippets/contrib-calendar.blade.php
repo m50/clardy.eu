@@ -1,3 +1,6 @@
+@if (!isset($git))
+    @inject ('git', 'App\Services\GithubApi.php')
+@endif
 <span class="text-gray-600">Earliest Date: {{ $gitData['earliest_date']->toDateString() }}</span>
 <span class="text-gray-600 float-right">Latest Date: {{ $gitData['latest_date']->toDateString() }}</span>
 <table class="calendar-heatmap">
@@ -23,7 +26,7 @@
                             <rect x=0 y=0 width=15 height=15 fill="none"></rect>
                         </svg>
                         @else
-                        <svg width=15 height=15 class="{{ $daysEvents['heatmap_class'] }} rounded-full">
+                        <svg width=15 height=15 class="{{ $git->determineHeatmapColour($daysEvents['count']) }} rounded-full">
                             <rect x=0 y=0 width=15 height=15 fill="none"></rect>
                         </svg>
                         @endif
@@ -55,27 +58,27 @@
                 &nbsp;
             </td>
             <td class="bg-gray-100 border-solid border-gray-100 border-2" title="No contributions">
-                <svg width=15 height=15 class="bg-gray-300 rounded-full">
+                <svg width=15 height=15 class="{{ $git->determineHeatmapColour(0) }} rounded-full">
                     <rect x=0 y=0 width=15 height=15 fill="none"></rect>
                 </svg>
             </td>
             <td class="bg-gray-100 border-solid border-gray-100 border-2" title="1-9 contributions">
-                <svg width=15 height=15 class="bg-purple-200 rounded-full">
+                <svg width=15 height=15 class="{{ $git->determineHeatmapColour(3) }} rounded-full">
                     <rect x=0 y=0 width=15 height=15 fill="none"></rect>
                 </svg>
             </td>
             <td class="bg-gray-100 border-solid border-gray-100 border-2" title="10-19 contributions">
-                <svg width=15 height=15 class="bg-purple-400 rounded-full">
+                <svg width=15 height=15 class="{{ $git->determineHeatmapColour(13) }} rounded-full">
                     <rect x=0 y=0 width=15 height=15 fill="none"></rect>
                 </svg>
             </td>
             <td class="bg-gray-100 border-solid border-gray-100 border-2" title="20-29 contributions">
-                <svg width=15 height=15 class="bg-purple-600 rounded-full">
+                <svg width=15 height=15 class="{{ $git->determineHeatmapColour(23) }} rounded-full">
                     <rect x=0 y=0 width=15 height=15 fill="none"></rect>
                 </svg>
             </td>
             <td class="bg-gray-100 border-solid border-gray-100 border-2" title="30+ contributions">
-                <svg width=15 height=15 class="bg-purple-800 rounded-full">
+                <svg width=15 height=15 class="{{ $git->determineHeatmapColour(33) }} rounded-full">
                     <rect x=0 y=0 width=15 height=15 fill="none"></rect>
                 </svg>
             </td>

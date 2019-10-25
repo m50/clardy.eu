@@ -34,7 +34,7 @@
                 <h1 class="text-gray-600 text-center font-light tracking-wider text-5xl mb-6">
                     {{ config('app.name', 'Laravel') }}
                 </h1>
-                @include('snippets.contrib-calendar', ['gitData' => $gl])
+                @include('snippets.contrib-calendar', ['gitData' => $data, 'git' => $git])
             </div>
         </div>
     </div>
