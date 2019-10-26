@@ -2,8 +2,6 @@
 
 namespace App\Providers;
 
-use App\Services\GithubApi;
-use App\Services\GitlabApi;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -25,11 +23,5 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->app->bind(GithubApi::class, function ($app) {
-            return new GithubApi();
-        });
-        $this->app->bind(GitlabApi::class, function ($app) {
-            return new GitlabApi();
-        });
     }
 }
