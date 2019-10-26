@@ -2,12 +2,15 @@
 
 namespace App\Services;
 
+use App\Contracts\GitApi;
+use App\GitData;
 use Carbon\Carbon;
 use GuzzleHttp\Client;
-use Illuminate\Contracts\Support\Arrayable;
 
-class GitlabApi implements Arrayable
+class GitlabApi implements GitApi
 {
+    private $key;
+    private $uri;
     /**
      * $guzzle
      *
@@ -36,16 +39,22 @@ class GitlabApi implements Arrayable
     /**
      * __construct
      *
-     * @param string|null $url
-     * @param string|null $key
+     * @param string $key
+     * @param string $url
      * @return void
      */
-    public function __construct(string $url = null, string $key = null)
+    public function __construct(string $key, string $uri)
+    {
+        $this->key = $key;
+        $this->uri = $uri;
+    }
+
+    private function init()
     {
         $this->guzzle = new Client([
-            'base_uri' => $url ?? config('contrib-calendar.gitlab.url'),
+            'base_uri' => $this->uri,
             'headers' => [
-                'PRIVATE-TOKEN' => $key ?? config('contrib-calendar.gitlab.key'),
+                'PRIVATE-TOKEN' => $this->key,
                 'Accept' => 'application/json'
             ]
         ]);
@@ -60,6 +69,9 @@ class GitlabApi implements Arrayable
      */
     public function queryEvents(int $page = 1): self
     {
+        if (!isset($this->guzzle)) {
+            $this->init();
+        }
         $options = collect([
             'page' => $page,
             'per_page' => 100,
@@ -83,7 +95,7 @@ class GitlabApi implements Arrayable
      *
      * @return array
      */
-    public function getEventCountsByDay(): array
+    public function getEventCountsByDay(): GitData
     {
         $this->queryEvents(1);
         $totalPages = (int) $this->responseHeaders['X-Total-Pages'][0];
@@ -110,11 +122,7 @@ class GitlabApi implements Arrayable
             });
         });
         
-        return [
-            'data' => $data,
-            'earliest_date' => $this->after,
-            'latest_date' => Carbon::parse(now()->toDateString()),
-        ];
+        return new GitData($data, $this->after, Carbon::parse(now()->toDateString()));
     }
 
     /**
@@ -133,36 +141,5 @@ class GitlabApi implements Arrayable
             return $this->responseHeaders ?? collect();
         }
         return $this->$name;
-    }
-
-    /**
-     * toArray
-     *
-     * @return array
-     */
-    public function toArray()
-    {
-        return $this->getEventCountsByDay();
-    }
-
-    /**
-     * determineHeatmapColour
-     *
-     * @param int $count
-     * @return string
-     */
-    public function determineHeatmapColour($count): string
-    {
-        $heatmapClass = config('contrib-calendar.heatmap-class.zero', 'bg-gray-300');
-        if ($count >= 1 && $count < 9) {
-            $heatmapClass = config('contrib-calendar.heatmap-class.low', 'bg-blue-200');
-        } elseif ($count >= 10 && $count < 19) {
-            $heatmapClass = config('contrib-calendar.heatmap-class.medium', 'bg-blue-400');
-        } elseif ($count >= 20 && $count < 29) {
-            $heatmapClass = config('contrib-calendar.heatmap-class.high', 'bg-blue-600');
-        } elseif ($count >= 30) {
-            $heatmapClass = config('contrib-calendar.heatmap-class.very-high', 'bg-blue-800');
-        }
-        return $heatmapClass;
     }
 }

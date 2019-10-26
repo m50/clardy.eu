@@ -4,10 +4,13 @@ namespace App\Services;
 
 use Carbon\Carbon;
 use GuzzleHttp\Client;
-use Illuminate\Contracts\Support\Arrayable;
+use App\GitData;
+use App\Contracts\GitApi;
 
-class GithubApi implements Arrayable
+class GithubApi implements GitApi
 {
+    private $key;
+    private $uri;
     /**
      * $guzzle
      *
@@ -40,22 +43,45 @@ class GithubApi implements Arrayable
     protected $repos;
 
     /**
+     * $user
+     *
+     * @var array
+     */
+    protected $user;
+
+    /**
+     * $username
+     *
+     * @var string
+     */
+    protected $username;
+
+    /**
      * __construct
      *
+     * @param string $username
+     * @param string $key
+     * @param string $uri
      * @return void
      */
-    public function __construct(string $username = null, string $key = null, string $uri = null)
+    public function __construct(string $username, string $key, string $uri)
+    {
+        $this->key = $key;
+        $this->uri = $uri;
+        $this->username = $username;
+    }
+
+    public function init ()
     {
         $this->guzzle = new Client([
-            'base_uri' => config('contrib-calendar.github.url'),
+            'base_uri' => $this->uri,
             'headers' => [
-                'Authorization' => 'token ' . config('contrib-calendar.github.key'),
+                'Authorization' => "token {$this->key}",
                 'Accept' => 'application/vnd.github.v3+json'
             ]
         ]);
         $this->after = Carbon::parse(Carbon::now()->subMonths(12)->toDateString());
-
-        $this->queryUser($username ?? config('contrib-calendar.github.username'));
+        $this->queryUser($this->username);
     }
 
     public function queryUser(string $username): self
@@ -72,6 +98,9 @@ class GithubApi implements Arrayable
      */
     public function queryRepos(): self
     {
+        if (!isset($this->guzzle)) {
+            $this->init();
+        }
         $response = $this->guzzle->get("/users/{$this->user['login']}/repos");
         $this->responseHeaders = $response->getHeaders();
         $this->repos = collect(json_decode($response->getBody()->getContents(), true))
@@ -117,9 +146,9 @@ class GithubApi implements Arrayable
     /**
      * getCommitCountsByDay
      *
-     * @return array
+     * @return GitData
      */
-    public function getCommitCountsByDay(): array
+    public function getEventCountsByDay(): GitData
     {
         $data = collect();
         foreach($this->queryRepos()->repos as $repo) {
@@ -149,11 +178,7 @@ class GithubApi implements Arrayable
             });
         });
 
-        return [
-            'data' => $data,
-            'earliest_date' => $this->after,
-            'latest_date' => Carbon::parse(now()->toDateString()),
-        ];
+        return new GitData($data, $this->after, Carbon::parse(now()->toDateString()));
     }
 
     /**
@@ -172,37 +197,6 @@ class GithubApi implements Arrayable
             return $this->responseHeaders ?? collect();
         }
         return $this->$name;
-    }
-
-    /**
-     * toArray
-     *
-     * @return array
-     */
-    public function toArray()
-    {
-        return $this->getCommitCountsByDay();
-    }
-
-    /**
-     * determineHeatmapColour
-     *
-     * @param int $count
-     * @return string
-     */
-    public function determineHeatmapColour($count): string
-    {
-        $heatmapClass = config('contrib-calendar.heatmap-class.zero', 'bg-gray-300');
-        if ($count >= 1 && $count < 9) {
-            $heatmapClass = config('contrib-calendar.heatmap-class.low', 'bg-green-200');
-        } elseif ($count >= 10 && $count < 19) {
-            $heatmapClass = config('contrib-calendar.heatmap-class.medium', 'bg-green-400');
-        } elseif ($count >= 20 && $count < 29) {
-            $heatmapClass = config('contrib-calendar.heatmap-class.high', 'bg-green-600');
-        } elseif ($count >= 30) {
-            $heatmapClass = config('contrib-calendar.heatmap-class.very-high', 'bg-green-800');
-        }
-        return $heatmapClass;
     }
 
     /**
