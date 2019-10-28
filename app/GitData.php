@@ -2,11 +2,13 @@
 
 namespace App;
 
+use ArrayAccess;
 use Carbon\Carbon;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Traits\Macroable;
 use Illuminate\Contracts\Support\Jsonable;
 use Illuminate\Contracts\Support\Arrayable;
+use Iterator;
 
 /**
  * GitData
@@ -20,9 +22,16 @@ use Illuminate\Contracts\Support\Arrayable;
  * @method mixed __get()
  * @static string determineHeatmapColour($count)
  */
-class GitData implements Arrayable, Jsonable
+class GitData implements Arrayable, Jsonable, ArrayAccess, Iterator
 {
     use Macroable;
+
+    /**
+     * The position of the iterator.
+     *
+     * @var int
+     */
+    private $position;
 
     /**
      * The data store for the countables.
@@ -58,6 +67,7 @@ class GitData implements Arrayable, Jsonable
         $this->data = $data;
         $this->latest_date = $latest_date ?? now();
         $this->earliest_date = $earliest_date ?? now()->subMonths(12);
+        $this->rewind();
     }
 
     /**
@@ -161,5 +171,108 @@ class GitData implements Arrayable, Jsonable
             $heatmapClass = config('contrib-calendar.heatmap-class.very-high', 'bg-blue-800');
         }
         return $heatmapClass;
+    }
+
+    /**
+     * Check if offset exists for array access.
+     *
+     * @param int|string $offset
+     * @return void
+     */
+    public function offsetExists($offset)
+    {
+        return isset($this->data[$offset]) || $offset == 'earliest_date' || $offset == 'latest_date';
+    }
+
+    /**
+     * Get the setting from array access.
+     *
+     * @param int|string $offset
+     * @return array|Carbon\Carbon
+     */
+    public function offsetGet($offset)
+    {
+        if ($offset == 'earliest_date' || $offset == 'latest_date') {
+            return $this->$offset;
+        }
+        return $this->data[$offset];
+    }
+
+    /**
+     * Set a value using array access.
+     *
+     * @param int|string $offset
+     * @param array|Carbon\Carbon $value
+     * @return void
+     */
+    public function offsetSet($offset, $value)
+    {
+        if ($offset == 'earliest_date' || $offset == 'latest_date') {
+            $this->$offset = $value;
+        }
+        $this->data[$offset] = $value;
+    }
+
+    /**
+     * [Not Implemented] Unset an offset using array access.
+     *
+     * @param int|string $offset
+     * @return void
+     * 
+     * @throws \Exception Unable to unset a GitData date/time.
+     */
+    public function offsetUnset($offset)
+    {
+        throw new \Exception('Unable to unset a GitData date/time.');
+    }
+
+    /**
+     * Rewing the iterable.
+     *
+     * @return void
+     */
+    public function rewind()
+    {
+        $this->position = 1;
+    }
+
+    /**
+     * Get the value of the current position using the iterable.
+     *
+     * @return array
+     */
+    public function current()
+    {
+        return $this->data[$this->position];
+    }
+
+    /**
+     * Get the key for the current position of the iterable.
+     *
+     * @return int
+     */
+    public function key()
+    {
+        return $this->position;
+    }
+
+    /**
+     * Go to the next step of the iterable.
+     *
+     * @return void
+     */
+    public function next()
+    {
+        ++$this->position;
+    }
+
+    /**
+     * Check if entry in iterable is valid.
+     *
+     * @return bool
+     */
+    public function valid()
+    {
+        return isset($this->data[$this->position]) && $this->position >= 1 && $this->position <= 7;
     }
 }
