@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Services;
+namespace Git\Services;
 
 use Carbon\Carbon;
 use GuzzleHttp\Client;
-use App\GitData;
-use App\Contracts\GitApi;
+use Git\GitData;
+use Git\Contracts\GitApi;
 
 class GithubApi implements GitApi
 {

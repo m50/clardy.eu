@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Services;
+namespace Git\Services;
 
-use App\Contracts\GitApi;
-use App\GitData;
+use Git\Contracts\GitApi;
+use Git\GitData;
 use Carbon\Carbon;
 use GuzzleHttp\Client;
 

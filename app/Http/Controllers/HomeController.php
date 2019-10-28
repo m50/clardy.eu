@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\GitData;
-use App\Jobs\CacheEventData;
-use App\Services\GithubApi;
-use App\Services\GitlabApi;
+use Git\GitData;
+use Git\Jobs\CacheEventData;
+use Git\Services\GithubApi;
+use Git\Services\GitlabApi;
 use Illuminate\Support\Facades\Cache;
 
 class HomeController extends Controller

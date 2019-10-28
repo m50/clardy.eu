@@ -24,7 +24,7 @@
                             <rect x=0 y=0 width=15 height=15 fill="none"></rect>
                         </svg>
                         @else
-                        <svg width=15 height=15 class="{{ App\GitData::determineHeatmapColour($daysEvents['count']) }} rounded-full">
+                        <svg width=15 height=15 class="{{ Git\GitData::determineHeatmapColour($daysEvents['count']) }} rounded-full">
                             <rect x=0 y=0 width=15 height=15 fill="none"></rect>
                         </svg>
                         @endif
@@ -56,27 +56,27 @@
                 &nbsp;
             </td>
             <td class="bg-gray-100 border-solid border-gray-100 border-2" title="No contributions">
-                <svg width=15 height=15 class="{{ App\GitData::determineHeatmapColour(0) }} rounded-full">
+                <svg width=15 height=15 class="{{ Git\GitData::determineHeatmapColour(0) }} rounded-full">
                     <rect x=0 y=0 width=15 height=15 fill="none"></rect>
                 </svg>
             </td>
             <td class="bg-gray-100 border-solid border-gray-100 border-2" title="1-9 contributions">
-                <svg width=15 height=15 class="{{ App\GitData::determineHeatmapColour(3) }} rounded-full">
+                <svg width=15 height=15 class="{{ Git\GitData::determineHeatmapColour(3) }} rounded-full">
                     <rect x=0 y=0 width=15 height=15 fill="none"></rect>
                 </svg>
             </td>
             <td class="bg-gray-100 border-solid border-gray-100 border-2" title="10-19 contributions">
-                <svg width=15 height=15 class="{{ App\GitData::determineHeatmapColour(13) }} rounded-full">
+                <svg width=15 height=15 class="{{ Git\GitData::determineHeatmapColour(13) }} rounded-full">
                     <rect x=0 y=0 width=15 height=15 fill="none"></rect>
                 </svg>
             </td>
             <td class="bg-gray-100 border-solid border-gray-100 border-2" title="20-29 contributions">
-                <svg width=15 height=15 class="{{ App\GitData::determineHeatmapColour(23) }} rounded-full">
+                <svg width=15 height=15 class="{{ Git\GitData::determineHeatmapColour(23) }} rounded-full">
                     <rect x=0 y=0 width=15 height=15 fill="none"></rect>
                 </svg>
             </td>
             <td class="bg-gray-100 border-solid border-gray-100 border-2" title="30+ contributions">
-                <svg width=15 height=15 class="{{ App\GitData::determineHeatmapColour(33) }} rounded-full">
+                <svg width=15 height=15 class="{{ Git\GitData::determineHeatmapColour(33) }} rounded-full">
                     <rect x=0 y=0 width=15 height=15 fill="none"></rect>
                 </svg>
             </td>

@@ -34,7 +34,8 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "app/"
+            "App\\": "app/",
+            "Git\\": "git-contrib-calendar/"
         },
         "classmap": [
             "database/seeds",

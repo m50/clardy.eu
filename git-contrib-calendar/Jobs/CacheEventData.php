@@ -1,9 +1,8 @@
 <?php
 
-namespace App\Jobs;
+namespace Git\Jobs;
 
-use App\Contracts\GitApi;
-use App\GitData;
+use Git\GitData;
 use Illuminate\Bus\Queueable;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Queue\SerializesModels;

@@ -2,6 +2,9 @@
 
 namespace App\Console;
 
+use Git\Services\GithubApi;
+use Git\Services\GitlabApi;
+use Git\Jobs\CacheEventData;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 

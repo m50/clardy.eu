@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Contracts;
+namespace Git\Contracts;
 
-use App\GitData;
+use Git\GitData;
 
 interface GitApi
 {

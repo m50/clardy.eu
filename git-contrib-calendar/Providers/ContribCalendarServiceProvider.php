@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Providers;
+namespace Git\Providers;
 
-use App\Services\GithubApi;
-use App\Services\GitlabApi;
+use Git\Services\GithubApi;
+use Git\Services\GitlabApi;
 use Illuminate\Support\ServiceProvider;
 
 class ContribCalendarServiceProvider extends ServiceProvider

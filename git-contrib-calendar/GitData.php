@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Git;
 
 use ArrayAccess;
 use Carbon\Carbon;
@@ -20,6 +20,15 @@ use Iterator;
  * @method array toArray()
  * @method string toJson()
  * @method mixed __get()
+ * @method bool offsetExists($offset)
+ * @method string|Carbon\Carbon offsetGet($offset)
+ * @method void offsetSet($offset, $value)
+ * @method void offsetUnset($offset)
+ * @method void rewind()
+ * @method array current()
+ * @method int key()
+ * @method void next()
+ * @method bool valid()
  * @static string determineHeatmapColour($count)
  */
 class GitData implements Arrayable, Jsonable, ArrayAccess, Iterator
