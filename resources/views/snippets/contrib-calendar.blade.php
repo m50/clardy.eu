@@ -5,7 +5,7 @@
     <tbody>
         @for ($dayOfWeek = 1; $dayOfWeek <= 7; $dayOfWeek++)
             <tr>
-                @for ($weekNumber = 0; $weekNumber <= 53; $weekNumber++)
+                @for ($weekNumber = 0; $weekNumber <= 54; $weekNumber++)
                     @if ($weekNumber > 0)
                     @php
                     $curDay = Carbon\Carbon::parse($gitData->earliest_date->copy()->startOfWeek()->format('Y-m-d'))
