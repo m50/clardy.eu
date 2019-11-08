@@ -16,7 +16,7 @@ class HomeController extends Controller
             'git-contrib-data',
             function () {
                 $this->dispatch(new CacheEventData(app(GithubApi::class), app(GitlabApi::class)));
-                return new GitData(collect([1=>[], 2 => [], 3 => [], 4 => [], 5 => [], 6 => [], 7 => []]));
+                return new GitData();
             }
         );
         if (app()->environment('Production')) {
