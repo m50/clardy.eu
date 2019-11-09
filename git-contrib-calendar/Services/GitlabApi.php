@@ -30,7 +30,7 @@ class GitlabApi implements GitApi
             'headers' => [
                 'PRIVATE-TOKEN' => $this->key,
                 'Accept' => 'application/json',
-            ]
+            ],
         ]);
         $this->after = Carbon::parse(Carbon::now()->subMonths(12)->toDateString());
     }
@@ -55,6 +55,7 @@ class GitlabApi implements GitApi
                 $e['created_at'] = Carbon::parse(Carbon::parse($e['created_at'])->toDateString());
                 return $e;
             });
+
         return $this;
     }
 
@@ -65,7 +66,7 @@ class GitlabApi implements GitApi
         $data = $this->events->map(function ($e) {
             return $e['created_at'];
         });
-        for ($i=2; $i <= $totalPages; $i++) {
+        for ($i = 2; $i <= $totalPages; $i++) {
             $this->queryEvents($i);
             $response = $this->events->map(function ($e) {
                 return $e['created_at'];
@@ -97,6 +98,7 @@ class GitlabApi implements GitApi
         } elseif ($name == 'headers') {
             return $this->responseHeaders ?? collect();
         }
+
         return $this->$name;
     }
 }

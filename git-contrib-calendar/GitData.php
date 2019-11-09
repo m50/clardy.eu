@@ -4,8 +4,8 @@ namespace Git;
 
 use ArrayAccess;
 use Carbon\Carbon;
-use Illuminate\Contracts\Support\Jsonable;
 use Illuminate\Contracts\Support\Arrayable;
+use Illuminate\Contracts\Support\Jsonable;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Traits\Macroable;
 use Iterator;
@@ -115,6 +115,7 @@ class GitData implements Arrayable, Jsonable, ArrayAccess, Iterator
         if ($gd->latest_date->gt($this->latest_date)) {
             $this->latest_date = $gd->latest_date;
         }
+
         return $this;
     }
 
