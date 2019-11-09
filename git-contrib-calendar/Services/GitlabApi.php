@@ -53,6 +53,7 @@ class GitlabApi implements GitApi
         $this->events = collect(json_decode($response->getBody()->getContents(), true))
             ->map(function ($e) {
                 $e['created_at'] = Carbon::parse(Carbon::parse($e['created_at'])->toDateString());
+
                 return $e;
             });
 
@@ -85,7 +86,7 @@ class GitlabApi implements GitApi
                 ];
             });
         });
-        
+
         return new GitData($data, $this->after, Carbon::parse(now()->toDateString()));
     }
 
