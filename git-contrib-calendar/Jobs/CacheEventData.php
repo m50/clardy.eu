@@ -4,18 +4,17 @@ namespace Git\Jobs;
 
 use Git\GitData;
 use Illuminate\Bus\Queueable;
-use Illuminate\Support\Facades\Cache;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
+use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Support\Facades\Cache;
 
 class CacheEventData implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable;
 
     /**
-     * $gitRunners
+     * THe runners for getting git contrib data.
      *
      * @var array
      */

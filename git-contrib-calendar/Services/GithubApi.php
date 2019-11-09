@@ -3,61 +3,61 @@
 namespace Git\Services;
 
 use Carbon\Carbon;
-use GuzzleHttp\Client;
-use Git\GitData;
 use Git\Contracts\GitApi;
+use Git\GitData;
+use GuzzleHttp\Client;
 
 class GithubApi implements GitApi
 {
     private $key;
     private $uri;
     /**
-     * $guzzle
+     * The Http client.
      *
      * @var GuzzleHttp\Client
      */
     protected $guzzle;
     /**
-     * $after
+     * $after.
      *
      * @var Carbon\Carbon
      */
     protected $after;
     /**
-     * $events
+     * $events.
      *
      * @var Collection
      */
     protected $events;
     /**
-     * $responseHeaders
+     * $responseHeaders.
      *
      * @var array
      */
     protected $responseHeaders;
     /**
-     * $repos
+     * $repos.
      *
      * @var Collection
      */
     protected $repos;
 
     /**
-     * $user
+     * $user.
      *
      * @var array
      */
     protected $user;
 
     /**
-     * $username
+     * $username.
      *
      * @var string
      */
     protected $username;
 
     /**
-     * __construct
+     * __construct.
      *
      * @param string $username
      * @param string $key
@@ -71,13 +71,13 @@ class GithubApi implements GitApi
         $this->username = $username;
     }
 
-    public function init ()
+    public function init()
     {
         $this->guzzle = new Client([
             'base_uri' => $this->uri,
             'headers' => [
                 'Authorization' => "token {$this->key}",
-                'Accept' => 'application/vnd.github.v3+json'
+                'Accept' => 'application/vnd.github.v3+json',
             ]
         ]);
         $this->after = Carbon::parse(Carbon::now()->subMonths(12)->toDateString());
@@ -92,13 +92,13 @@ class GithubApi implements GitApi
     }
 
     /**
-     * queryRepos
+     * queryRepos.
      *
      * @return self
      */
     public function queryRepos(): self
     {
-        if (!isset($this->guzzle)) {
+        if (! isset($this->guzzle)) {
             $this->init();
         }
         $response = $this->guzzle->get("/users/{$this->user['login']}/repos");
@@ -111,7 +111,7 @@ class GithubApi implements GitApi
     }
 
     /**
-     * queryCommits
+     * queryCommits.
      *
      * @param  string $repo
      * @param  int    $page
@@ -144,14 +144,14 @@ class GithubApi implements GitApi
     }
 
     /**
-     * getCommitCountsByDay
+     * getCommitCountsByDay.
      *
      * @return GitData
      */
     public function getEventCountsByDay(): GitData
     {
         $data = collect();
-        foreach($this->queryRepos()->repos as $repo) {
+        foreach ($this->queryRepos()->repos as $repo) {
             $this->queryCommits($repo, 1);
             $totalPages = $this->getTotalPages();
             $data = $data->merge($this->events->map(function ($e) {
@@ -182,7 +182,7 @@ class GithubApi implements GitApi
     }
 
     /**
-     * __get
+     * __get.
      *
      * @param string $name
      * @return mixed
@@ -200,13 +200,13 @@ class GithubApi implements GitApi
     }
 
     /**
-     * getTotalPages
+     * getTotalPages.
      *
      * @return int
      */
     private function getTotalPages(): int
     {
-        if (!isset($this->responseHeaders['Link'])) {
+        if (! isset($this->responseHeaders['Link'])) {
             return 1;
         }
         $lastPageLink = collect(explode(',', $this->responseHeaders['Link'][0]))->map(function ($m) {

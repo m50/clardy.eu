@@ -2,47 +2,21 @@
 
 namespace Git\Services;
 
+use Carbon\Carbon;
 use Git\Contracts\GitApi;
 use Git\GitData;
-use Carbon\Carbon;
 use GuzzleHttp\Client;
 
 class GitlabApi implements GitApi
 {
     private $key;
     private $uri;
-    /**
-     * $guzzle
-     *
-     * @var GuzzleHttp\Client
-     */
+
     protected $guzzle;
-    /**
-     * $after
-     *
-     * @var Carbon\Carbon
-     */
     protected $after;
-    /**
-     * $events
-     *
-     * @var Collection
-     */
     protected $events;
-    /**
-     * $responseHeaders
-     *
-     * @var array
-     */
     protected $responseHeaders;
 
-    /**
-     * __construct
-     *
-     * @param string $key
-     * @param string $url
-     * @return void
-     */
     public function __construct(string $key, string $uri)
     {
         $this->key = $key;
@@ -55,21 +29,15 @@ class GitlabApi implements GitApi
             'base_uri' => $this->uri,
             'headers' => [
                 'PRIVATE-TOKEN' => $this->key,
-                'Accept' => 'application/json'
+                'Accept' => 'application/json',
             ]
         ]);
         $this->after = Carbon::parse(Carbon::now()->subMonths(12)->toDateString());
     }
 
-    /**
-     * queryEvents
-     *
-     * @param int $page
-     * @return self
-     */
     public function queryEvents(int $page = 1): self
     {
-        if (!isset($this->guzzle)) {
+        if (! isset($this->guzzle)) {
             $this->init();
         }
         $options = collect([
@@ -90,11 +58,6 @@ class GitlabApi implements GitApi
         return $this;
     }
 
-    /**
-     * getEventCountsByDay
-     *
-     * @return array
-     */
     public function getEventCountsByDay(): GitData
     {
         $this->queryEvents(1);
@@ -125,12 +88,6 @@ class GitlabApi implements GitApi
         return new GitData($data, $this->after, Carbon::parse(now()->toDateString()));
     }
 
-    /**
-     * __get
-     *
-     * @param string $name
-     * @return mixed
-     */
     public function __get(string $name)
     {
         if ($name == 'events') {

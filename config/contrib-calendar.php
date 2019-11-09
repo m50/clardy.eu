@@ -9,7 +9,7 @@ return [
     'github' => [
         'key' => env('GITHUB_TOKEN'),
         'url' => env('GITHUB_BASE_URI'),
-        'username' => env('GITHUB_USERNAME')
+        'username' => env('GITHUB_USERNAME'),
     ],
 
     'heatmap-class' => [
