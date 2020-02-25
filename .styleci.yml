@@ -1,7 +1,0 @@
-preset: laravel
-# disabled:
-  # - length_ordered_imports
-finder:
-  not-name:
-    - index.php
-    - server.php
