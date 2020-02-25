@@ -7,17 +7,10 @@ permalink: /cv/
 
 <h1 align="center">Resumé/CV</h1>
 
-## Contact
-
-- Email: <marisa@clardy.eu>
-- Github: [m50](https://github.com/m50)
-- Twitter: [@MarisaCodes](https://twitter.com/MarisaCodes)
-- GitLab: [m501](https://gitlab.com/m501)
-
 ## Skills and Abilities
 
 - **Programming**
-  - *Web Development*
+  - *Experienced with*
     - PHP
       - Laravel
     - JavaScript
@@ -27,15 +20,28 @@ permalink: /cv/
     - HTML & CSS
       - SCSS
       - TailwindCSS
-  - *Scripting*
-    - Lua
-    - Python
     - Perl
-  - *Native*
+  - *Minimal Experience but love to learn*
+    - Ruby
     - C#
-    - C++
+    - Kotlin and Java
+    - Golang
+    - Python
 - **Other Environments**
-  - *Mail Relay*
+  - *Docker*
+  - *Git*
+    - Github
+    - Gitlab
+  - *CI/CD*
+    - Gitlab CI/CD
+    - TravisCI
+  - *Databases*
+    - PostgreSQL
+    - MySQL
+  - *Caches and Message Queues*
+    - Redis
+    - RabbitMQ
+  - *E-Mail*
     - Postfix
     - Amavisd
     - SpamAssassin
@@ -44,22 +50,8 @@ permalink: /cv/
   - *Web Servers*
     - Apache
     - NGinX
-  - *Database Environments*
-    - PostgreSQL
-    - MySQL
-    - Redis
-  - *Git*
-    - Github
-    - Gitlab
-  - *CI/CD*
-    - Gitlab CI
-    - StyleCI
-    - TravisCI
   - *Hosting Environments*
     - AWS EC2
-  - *Virtualization Environments*
-    - VMWare ESXi
-    - Oracle VirtualBox
 
 ## Work Experience
 

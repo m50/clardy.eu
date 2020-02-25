@@ -1,11 +1,20 @@
 title: Marisa Clardy
-email: marisa@clardy.eu
+author:
+  name: Marisa Clardy
+  email: marisa@clardy.eu
 description: >-
   The website for Marisa Clardy.
 baseurl: ""
 url: "https://clardy.eu"
-twitter_username: MarisaCodes
-github_username:  m50
 
-# Build settings
-theme: minima
+social:
+  twitter: MarisaCodes
+  github:  m50
+  instagram: marisaclardy1
+  devto: m50
+  gitlab:
+    - username: MarisaCodes
+      instance: gitlab.com
+
+plugins:
+  - jekyll-seo-tag
