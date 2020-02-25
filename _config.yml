@@ -1,0 +1,11 @@
+title: Marisa Clardy
+email: marisa@clardy.eu
+description: >-
+  The website for Marisa Clardy.
+baseurl: ""
+url: "https://clardy.eu"
+twitter_username: MarisaCodes
+github_username:  m50
+
+# Build settings
+theme: minima
