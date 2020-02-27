@@ -1,13 +1,14 @@
 ---
-layout: page
+layout: default
 title: CV
 permalink: /cv/
 ---
-<p align="center"><img style="border-radius: 200px;" src="https://www.gravatar.com/avatar/febc3d5f662cd665425a91c67e68bedc?s=200" /></p>
+<div class="flex justify-left content-center items-center">
+  <img class="rounded-full mr-8" src="https://www.gravatar.com/avatar/febc3d5f662cd665425a91c67e68bedc?s=200" />
+  <h1 class="text-3xl">Resumé/CV</h1>
+</div>
 
-<h1 align="center">Resumé/CV</h1>
-
-## Skills and Abilities
+### Skills and Abilities
 
 - **Programming**
   - *Experienced with*
@@ -53,7 +54,7 @@ permalink: /cv/
   - *Hosting Environments*
     - AWS EC2
 
-## Work Experience
+### Work Experience
 
 - **TitanHQ**
   - Location: [Salthill, Ireland](https://www.google.com/maps/place/TitanHQ+eMail+and+Web+Security/@53.2635584,-9.0731129,17z/data=!3m1!4b1!4m5!3m4!1s0x485b9689b5dcbd0b:0x3c4ffb292b9292d7!8m2!3d53.2635552!4d-9.0709242)
@@ -70,7 +71,7 @@ permalink: /cv/
     - *Sales*
       - Time Period: Nov. 2015 - May 2016
 
-## Education
+### Education
 
 - **NYU Tandon School of Engineering**
   - *Location*: [Brooklyn, NY](https://www.google.com/maps/place/New+York+University+Tandon+School+of+Engineering/@40.6942076,-73.9887677,17z/data=!3m1!4b1!4m5!3m4!1s0x89c25a4a4d8396f3:0xda9b313d596491f7!8m2!3d40.6942036!4d-73.986579)

@@ -19,3 +19,5 @@ social:
 
 plugins:
   - jekyll-seo-tag
+  - jekyll-postcss
+  - jekyll-purgecss
