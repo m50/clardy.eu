@@ -1,31 +1,29 @@
-<footer class="site-footer h-card">
+<footer class="w-full static py-10 border-t border-gray-400">
     <data class="u-url" href="{{ "/" | relative_url }}"></data>
 
-    <div class="wrapper">
-
-        <div class="footer-col-wrapper">
-        <div class="footer-col">
-            <p class="feed-subscribe">
-            </p>
+    <div class="flex justify-center content-center items-center w-full">
+        <div class="px-10">
         {%- if site.author %}
             <ul class="contact-list">
             {% if site.author.name -%}
-                <li class="p-name">{{ site.author.name | escape }}</li>
+                <li>{{ site.author.name | escape }}</li>
             {% endif -%}
             {% if site.author.email -%}
-                <li><a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
+                <li><a class="text-indigo-400 no-underline hover:underline" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
             {%- endif %}
             </ul>
         {%- endif %}
         </div>
-        <div class="footer-col">
+        <div class="max-w-lg px-10">
             <p>{{ site.description | escape }}</p>
         </div>
-        </div>
-
-        <div class="social-links">
+    </div>
+    <div class="pt-10 flex justify-center">
+        <div></div>
+        <div class="w-1/4 border border-gray-400 text-gray-600 h-8 p-5 flex justify-between content-center items-center">
         {%- include social.html -%}
         </div>
-
+        <div></div>
     </div>
 </footer>
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.0.1/dist/alpine.js" defer></script>

@@ -1,9 +1,67 @@
 
 
-<ul class="social-media-list">
-    {%- if site.social.twitter -%}<li><a rel="me" href="https://twitter.com/{{ site.social.twitter | cgi_escape | escape }}" title="{{ site.social.twitter | escape }}"><svg class="svg-icon grey"><use xlink:href="{{ '/assets/minima-social-icons.svg#twitter' | relative_url }}"></use></svg></a></li>{%- endif -%}
-    {%- if site.social.github -%}<li><a rel="me" href="https://github.com/{{ site.social.github | cgi_escape | escape }}" title="{{ site.social.github | escape }}"><svg class="svg-icon grey"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg></a></li>{%- endif -%}
-    {%- for glb in site.social.gitlab -%}{%- if glb.username and glb.instance -%}<li><a rel="me" href="https://{{ glb.instance | cgi_escape | escape}}/{{glb.username}}" title="{{ glb.username | escape }}"><svg class="svg-icon grey"><use xlink:href="{{ '/assets/minima-social-icons.svg#gitlab' | relative_url }}"></use></svg></a></li>{%- endif -%}{%- endfor -%}
-    {%- if site.social.instagram -%}<li><a rel="me" href="https://www.instagram.com/{{ site.social.instagram | cgi_escape | escape }}" title="{{ site.social.instagram | escape }}"><svg class="svg-icon grey"><use xlink:href="{{ '/assets/minima-social-icons.svg#instagram' | relative_url }}"></use></svg></a></li>{%- endif -%}
-    {%- if site.social.devto -%}<li><a href="https://dev.to/{{ site.social.devto | cgi_escape | escape }}" title="{{ site.social.devto | escape }}"><svg class="svg-icon grey"><use xlink:href="{{ '/assets/minima-social-icons.svg#devto' | relative_url }}"></use></svg></a></li>{%- endif -%}
+<ul class="flex-grow flex justify-between py-3 h-5 content-center items-center">
+    {%- if site.social.twitter -%}
+    <li>
+        <a rel="me"
+            class="hover:text-indigo-800"
+            href="https://twitter.com/{{ site.social.twitter | cgi_escape | escape }}"
+            title="{{ site.social.twitter | escape }}">
+            <svg class="w-5 h-5 fill-current inline-block">
+                <use xlink:href="{{ '/assets/minima-social-icons.svg#twitter' | relative_url }}"></use>
+            </svg>
+        </a>
+    </li>
+    {%- endif -%}
+
+    {%- if site.social.github -%}
+    <li>
+        <a rel="me"
+            class="hover:text-indigo-800"
+            href="https://github.com/{{ site.social.github | cgi_escape | escape }}"
+            title="{{ site.social.github | escape }}">
+            <svg class="w-5 h-5 fill-current inline-block">
+                <use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use>
+            </svg>
+        </a>
+    </li>
+    {%- endif -%}
+
+    {%- for glb in site.social.gitlab -%}{%- if glb.username and glb.instance -%}
+    <li>
+        <a rel="me"
+            class="hover:text-indigo-800"
+            href="https://{{ glb.instance | cgi_escape | escape}}/{{glb.username}}"
+            title="{{ glb.username | escape }}">
+            <svg class="w-5 h-5 fill-current inline-block">
+                <use xlink:href="{{ '/assets/minima-social-icons.svg#gitlab' | relative_url }}"></use>
+            </svg>
+        </a>
+    </li>
+    {%- endif -%}{%- endfor -%}
+
+    {%- if site.social.instagram -%}
+    <li>
+        <a rel="me"
+            class="hover:text-indigo-800"
+            href="https://www.instagram.com/{{ site.social.instagram | cgi_escape | escape }}"
+            title="{{ site.social.instagram | escape }}">
+            <svg class="w-5 h-5 fill-current inline-block">
+                <use xlink:href="{{ '/assets/minima-social-icons.svg#instagram' | relative_url }}"></use>
+            </svg>
+        </a>
+    </li>
+    {%- endif -%}
+
+    {%- if site.social.devto -%}
+    <li>
+        <a href="https://dev.to/{{ site.social.devto | cgi_escape | escape }}"
+            class="hover:text-indigo-800"
+            title="{{ site.social.devto | escape }}">
+            <svg class="w-5 h-5 fill-current inline-block">
+                <use xlink:href="{{ '/assets/minima-social-icons.svg#devto' | relative_url }}"></use>
+            </svg>
+        </a>
+    </li>
+    {%- endif -%}
 </ul>
