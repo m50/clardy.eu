@@ -4,7 +4,7 @@ title: CV
 permalink: /cv/
 ---
 <div class="flex justify-left content-center items-center">
-  <img class="rounded-full mr-8" src="https://www.gravatar.com/avatar/febc3d5f662cd665425a91c67e68bedc?s=200" />
+  <img class="hidden md:inline-block rounded-full mr-8" src="https://www.gravatar.com/avatar/febc3d5f662cd665425a91c67e68bedc?s=200" />
   <h1 class="text-3xl">Resumé/CV</h1>
 </div>
 

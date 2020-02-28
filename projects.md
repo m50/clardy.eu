@@ -4,7 +4,7 @@ title: Projects
 permalink: /projects/
 ---
 
-## What I contributed to
+## What I have contributed to
 
 - [Mail::DMARC](https://github.com/msimerson/mail-dmarc)
     - Provided PostgreSQL support

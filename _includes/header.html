@@ -1,19 +1,28 @@
-<header class="flex items-center content-center justify-between bg-indigo-500 py-3 text-white">
+<header class="flex items-center content-center justify-between bg-indigo-500 py-3 text-white fixed right-0 left-0 top-0 md:relative">
     <div></div>
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.header_pages | default: default_paths -%}
     {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
-    <a class="uppercase text-xl" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+    {% if page.url != "/" %}
+    <a class="sm:hidden inline-block uppercase text-xl" rel="author" href="{{ "/" | relative_url }}">
+        <!-- Home Icon from https://github.com/sschoger/heroicons-ui -->
+        <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path d="M13 20v-5h-2v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-7.59l-.3.3a1 1 0 1 1-1.4-1.42l9-9a1 1 0 0 1 1.4 0l9 9a1 1 0 0 1-1.4 1.42l-.3-.3V20a2 2 0 0 1-2 2h-3a2 2 0 0 1-2-2zm5 0v-9.59l-6-6-6 6V20h3v-5c0-1.1.9-2 2-2h2a2 2 0 0 1 2 2v5h3z"/>
+        </svg>
+    </a>
+    {% endif %}
+    <a class="hidden sm:inline-block uppercase text-xl" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
 
     {%- if titles_size > 0 -%}
     <nav class="">
         {%- for path in page_paths -%}
             {%- assign my_page = site.pages | where: "path", path | first -%}
             {%- if my_page.title -%}
-            <a class="uppercase text-lg flex-grow mx-2 hover:text-indigo-800" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+            <a class="uppercase text-lg flex-grow mx-6 hover:text-indigo-800" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
             {%- endif -%}
         {%- endfor -%}
     </nav>
     {%- endif -%}
     <div></div>
 </header>
+<div class="md:hidden">&nbsp;</div>

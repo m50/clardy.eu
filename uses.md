@@ -4,7 +4,7 @@ title: Uses
 permalink: /uses/
 ---
 
-<h1 align="center">About me</h1>
+<h1 align="center">Uses</h1>
 <p align="center"><img style="max-width: 75%;" src="/assets/images/battlestation.jpg" /></p>
 
 ## Table of Contents
