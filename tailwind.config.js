@@ -7,8 +7,8 @@ module.exports = {
     },
     fontFamily: {
       sans: [
-        'Roboto', "Helvetica Neue", "Segoe UI",
-        'Arial', "Noto Sans", "Apple Color Emoji",
+        "Raleway", "Noto Sans", 'Roboto', "Helvetica Neue", "Segoe UI",
+        'Arial', "Apple Color Emoji",
         "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", 'sans-serif'
       ],
       serif: [
@@ -16,6 +16,9 @@ module.exports = {
       ],
       mono: [
         'Menlo', 'Monaco', 'Consolas', "Liberation Mono", "Courier New", 'monospace'
+      ],
+      welcome: [
+        'Kalam'
       ],
     },
   },
