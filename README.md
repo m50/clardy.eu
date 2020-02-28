@@ -3,3 +3,12 @@
 # clardy.eu
 
 https://clardy.eu - My website
+
+## Tools used to make this:
+
+- [Jekyll](https://jekyllrb.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Heroicons-ui](https://github.com/sschoger/heroicons-ui)
+- [Social Icons from Minima](https://github.com/jekyll/minima)
+- [Zondicons](http://www.zondicons.com/)
+- [Github Flavoured Markdown for Tailwind](https://github.com/iandinwoodie/github-markdown-tailwindcss)
