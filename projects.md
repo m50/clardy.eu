@@ -1,8 +1,9 @@
 ---
 layout: default
-title: OSS Projects
+title: Projects
 permalink: /oss-projects
 ---
+# OSS Projects
 
 ## What I have contributed to
 
