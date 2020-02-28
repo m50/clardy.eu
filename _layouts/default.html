@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 {%- include head.html -%}
-<body class="flex justify-between flex-col min-h-screen">
+<body class="print:font-serif flex justify-between flex-col min-h-screen">
 
     <div>
         {%- include header.html -%}
-        <main class="lg:w-1/2 w-auto text-lg leading-loose my-10 md:mx-auto" aria-label="Content">
+        <main class="lg:w-1/2 w-auto text-lg leading-loose my-10 print:my-0 md:mx-auto" aria-label="Content">
             <div class="markdown mx-5">
                 {{ content }}
             </div>

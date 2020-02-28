@@ -6,8 +6,16 @@ permalink: /cv/
 <div class="flex justify-left content-center items-center">
   <img class="hidden md:inline-block rounded-full mr-8" src="https://www.gravatar.com/avatar/febc3d5f662cd665425a91c67e68bedc?s=200" />
   <div>
-  <h1 class="text-3xl">Resumé/CV</h1>
+  <h1 class="text-3xl">
+    <span class="hidden print:inline-block">Marisa Clardy</span>
+    <span class="print:hidden inline-block">Resumé/CV</span>
+  </h1>
   {%- include social.html -%}
+  <ul class="hidden print:block font-mono">
+    <li>e: marisa@clardy.eu</li>
+    <li>t: 512-228-4291</li>
+    <li>w: https://clardy.eu</li>
+  </ul>
   </div>
 </div>
 
