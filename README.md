@@ -6,6 +6,7 @@ https://clardy.eu - My website
 
 ## Tools used to make this:
 
+- [Netlify for hosting](https://www.netlify.com/)
 - [Jekyll](https://jekyllrb.com/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Heroicons-ui](https://github.com/sschoger/heroicons-ui)
