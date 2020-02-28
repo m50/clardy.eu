@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Projects
-permalink: /projects/
+title: OSS Projects
+permalink: /oss-projects
 ---
 
 ## What I have contributed to
