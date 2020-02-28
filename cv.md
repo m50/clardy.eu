@@ -5,56 +5,102 @@ permalink: /cv/
 ---
 <div class="flex justify-left content-center items-center">
   <img class="hidden md:inline-block rounded-full mr-8" src="https://www.gravatar.com/avatar/febc3d5f662cd665425a91c67e68bedc?s=200" />
+  <div>
   <h1 class="text-3xl">Resumé/CV</h1>
+  {%- include social.html -%}
+  </div>
 </div>
 
-### Skills and Abilities
+## Skills and Abilities
 
-- **Programming**
-  - *Experienced with*
-    - PHP
-      - Laravel
-    - JavaScript
-      - NodeJS
-      - VueJS
-      - JQuery
-    - HTML & CSS
-      - SCSS
-      - TailwindCSS
-    - Perl
-  - *Minimal Experience but love to learn*
-    - Ruby
-    - C#
-    - Kotlin and Java
-    - Golang
-    - Python
-- **Other Environments**
-  - *Docker*
-  - *Git*
-    - Github
-    - Gitlab
-  - *CI/CD*
-    - Gitlab CI/CD
-    - TravisCI
-  - *Databases*
-    - PostgreSQL
-    - MySQL
-  - *Caches and Message Queues*
-    - Redis
-    - RabbitMQ
-  - *E-Mail*
-    - Postfix
-    - Amavisd
-    - SpamAssassin
-    - Dovecot
-    - GSuite
-  - *Web Servers*
-    - Apache
-    - NGinX
-  - *Hosting Environments*
-    - AWS EC2
+<div class="flex flex-col md:flex-row justify-around">
 
-### Work Experience
+<div>
+<h3>Programming</h3>
+<ul>
+  <li class="list-none">
+    <span class="italic">Experienced with</span>
+    <ul>
+      <li>PHP <ul><li>Laravel</li></ul></li>
+      <li>JavaScript<ul>
+        <li>NodeJS</li>
+        <li>VueJS (Minimal)</li>
+        <li>React (Minimal)</li>
+      </ul></li>
+      <li>HTML & CSS<ul>
+        <li>TailwindCSS</li>
+        <li>SCSS</li>
+        <li>Bootstrap</li>
+      </ul></li>
+    </ul>
+  </li>
+  <li class="list-none">
+    <span class="italic">Minimal Experience but love to learn</span>
+    <ul>
+      <li>Kotlin and Java</li>
+      <li>Ruby</li>
+      <li>C#</li>
+      <li>Golang</li>
+      <li>Python</li>
+    </ul>
+  </li>
+</ul>
+</div>
+<div>
+<h3>Other</h3>
+<ul>
+  <li class="list-none pr-10">Docker</li>
+  <li class="list-none pr-10">Git
+    <ul>
+      <li>Github</li>
+      <li>Gitlab</li>
+    </ul>
+  </li>
+  <li class="list-none pr-10">CI/CD
+    <ul>
+      <li>Gitlab CI/CD</li>
+      <li>TravisCI</li>
+    </ul>
+  </li>
+  <li class="list-none pr-10">Databases
+    <ul>
+      <li>PostgreSQL</li>
+      <li>MySQL</li>
+    </ul>
+  </li>
+  <li class="list-none pr-10">Caches and Message Queues
+    <ul>
+      <li>Redis</li>
+      <li>RabbitMQ</li>
+    </ul>
+  </li>
+  <li class="list-none pr-10">E-Mail
+    <ul>
+      <li>Postfix</li>
+      <li>Amavisd</li>
+      <li>SpamAssassin</li>
+      <li>Dovecot</li>
+      <li>GSuite</li>
+    </ul>
+  </li>
+  <li class="list-none pr-10">Web Servers
+    <ul>
+      <li>Apache</li>
+      <li>NGinX</li>
+    </ul>
+  </li>
+  <li class="list-none pr-10">Hosting Environments
+    <ul>
+      <li>AWS EC2</li>
+      <li>Netlify</li>
+    </ul>
+  </li>
+</ul>
+</div>
+
+</div>
+
+## Work Experience
 
 - **TitanHQ**
   - Location: [Salthill, Ireland](https://www.google.com/maps/place/TitanHQ+eMail+and+Web+Security/@53.2635584,-9.0731129,17z/data=!3m1!4b1!4m5!3m4!1s0x485b9689b5dcbd0b:0x3c4ffb292b9292d7!8m2!3d53.2635552!4d-9.0709242)
@@ -71,7 +117,7 @@ permalink: /cv/
     - *Sales*
       - Time Period: Nov. 2015 - May 2016
 
-### Education
+## Education
 
 - **NYU Tandon School of Engineering**
   - *Location*: [Brooklyn, NY](https://www.google.com/maps/place/New+York+University+Tandon+School+of+Engineering/@40.6942076,-73.9887677,17z/data=!3m1!4b1!4m5!3m4!1s0x89c25a4a4d8396f3:0xda9b313d596491f7!8m2!3d40.6942036!4d-73.986579)

@@ -2,7 +2,7 @@
 
 <ul class="flex-grow flex justify-between py-3 h-5 content-center items-center">
     {%- if site.social.twitter -%}
-    <li>
+    <li class="list-none">
         <a rel="me"
             class="hover:text-indigo-800"
             href="https://twitter.com/{{ site.social.twitter | cgi_escape | escape }}"
@@ -15,7 +15,7 @@
     {%- endif -%}
 
     {%- if site.social.github -%}
-    <li>
+    <li class="list-none">
         <a rel="me"
             class="hover:text-indigo-800"
             href="https://github.com/{{ site.social.github | cgi_escape | escape }}"
@@ -28,7 +28,7 @@
     {%- endif -%}
 
     {%- for glb in site.social.gitlab -%}{%- if glb.username and glb.instance -%}
-    <li>
+    <li class="list-none">
         <a rel="me"
             class="hover:text-indigo-800"
             href="https://{{ glb.instance | cgi_escape | escape}}/{{glb.username}}"
@@ -41,7 +41,7 @@
     {%- endif -%}{%- endfor -%}
 
     {%- if site.social.instagram -%}
-    <li>
+    <li class="list-none">
         <a rel="me"
             class="hover:text-indigo-800"
             href="https://www.instagram.com/{{ site.social.instagram | cgi_escape | escape }}"
@@ -54,7 +54,7 @@
     {%- endif -%}
 
     {%- if site.social.devto -%}
-    <li>
+    <li class="list-none">
         <a href="https://dev.to/{{ site.social.devto | cgi_escape | escape }}"
             class="hover:text-indigo-800"
             title="{{ site.social.devto | escape }}">
