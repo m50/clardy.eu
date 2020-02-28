@@ -7,9 +7,9 @@ module.exports = {
     },
     fontFamily: {
       sans: [
-        'system-ui', "-apple-system", "Segoe UI", 'Roboto', "Helvetica Neue",
-        'Arial', "Noto Sans", 'sans - serif', "Apple Color Emoji",
-        "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+        'Roboto', "Helvetica Neue", "Segoe UI",
+        'Arial', "Noto Sans", "Apple Color Emoji",
+        "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", 'sans-serif'
       ],
       serif: [
         'Georgia', 'Cambria', "Times New Roman", 'Times', 'serif'
