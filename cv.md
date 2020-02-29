@@ -119,11 +119,6 @@ permalink: /cv
     - *Support Engineer*
       - Time Period: May 2016 - May 2018
       - Achievement: Developed a number of internal systems for the company.
-- **PC World/Currys**
-  - Location: [Salthill, Ireland](https://www.google.com/maps/place/TitanHQ+eMail+and+Web+Security/@53.2635584,-9.0731129,17z/data=!3m1!4b1!4m5!3m4!1s0x485b9689b5dcbd0b:0x3c4ffb292b9292d7!8m2!3d53.2635552!4d-9.0709242)
-  - Positions:
-    - *Sales*
-      - Time Period: Nov. 2015 - May 2016
 
 ## Education
 
@@ -135,3 +130,6 @@ permalink: /cv
   - *Location*: [Austin, Tx](https://www.google.com/maps/place/James+Bowie+High+School/@30.1876581,-97.860686,17z/data=!3m1!4b1!4m5!3m4!1s0x865b4c0e1e8e050b:0x9801923ccd64699f!8m2!3d30.1876535!4d-97.8584973)
   - *Degree Path*: High School
   - *Time Period*: Aug. 2008 - May 2012
+  - *Achievements of Note*:
+    - 1st Place in District Science Fair in Computer Science for a path finding algorithm
+    - Lead Autonomy Developer for FRC team
