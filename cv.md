@@ -33,6 +33,7 @@ game development and game AI.
 <div class="print:block flex flex-col md:flex-row justify-around">
 
 <div class="inline-block height-full align-top">
+<h3>Programming</h3>
 <ul>
   <li class="list-none">
     <span class="italic">Experienced with</span>
@@ -123,7 +124,14 @@ game development and game AI.
   - Positions:
     - *Senior Developer*
       - Time Period: May 2018 - Present
-      - Achievement: Lead developer on [SpamTitan](https://www.spamtitan.com/)
+      - Lead developer on [SpamTitan](https://www.spamtitan.com/)
+
+        > SpamTitan is a globally deployed Enterprise grade malware and spam filtering product
+        > with millions of users world wide.
+        > My work on it includes leading the API development, modernization of the tooling
+        > and mentoring the more senior engineers in the company on these modern tools,
+        > and advancements in the feature set of the product. Modernized the CI/CD dev flow
+        > to utilize docker, in a move towards a containerized environment for the product.
     - *Support Engineer*
       - Time Period: May 2016 - May 2018
       - Achievement: Developed a number of internal systems for the company.
