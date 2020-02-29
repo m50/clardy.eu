@@ -38,7 +38,10 @@ game development and game AI.
   <li class="list-none">
     <span class="italic">Experienced with</span>
     <ul>
-      <li>PHP <ul><li>Laravel</li></ul></li>
+      <li>PHP <ul>
+        <li>Laravel</li>
+        <li>Symfony</li>
+      </ul></li>
       <li>JavaScript<ul>
         <li>NodeJS</li>
         <li>VueJS (Minimal)</li>
