@@ -19,12 +19,20 @@ permalink: /cv
   </div>
 </div>
 
+## Personal Notes
+
+I am an active learner, constantly relaying new ideas and information to my team.
+
+I am interested in constant, active collaboration with my colleagues.
+
+I have since a young age actively been learning and teaching software tools, including
+game development and game AI.
+
 ## Skills and Abilities
 
-<div class="flex flex-col md:flex-row justify-around">
+<div class="print:block flex flex-col md:flex-row justify-around">
 
-<div>
-<h3>Programming</h3>
+<div class="inline-block height-full align-top">
 <ul>
   <li class="list-none">
     <span class="italic">Experienced with</span>
@@ -54,7 +62,7 @@ permalink: /cv
   </li>
 </ul>
 </div>
-<div>
+<div class="inline-block height-full align-top">
 <h3>Other</h3>
 <ul>
   <li class="list-none pr-10">Docker</li>
