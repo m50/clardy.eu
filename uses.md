@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Uses
-permalink: /uses
+#permalink: /uses
 ---
 
 <h1 align="center">Uses</h1>
