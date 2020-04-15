@@ -2,7 +2,8 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        'print': {'raw': 'print'},
+        'print': { 'raw': 'print' },
+        '2xl': '1700px',
       }
     },
     fontSize: {
