@@ -5,6 +5,13 @@ permalink: /oss-projects
 ---
 # OSS Projects
 
+<figure class="flex justify-center w-full h-64">
+    <img src="/assets/undraw/proud_coder.svg" alt="Proud coder" />
+    <figcaption class="sr-only">
+        Proud coder illustration by <a href="https://undraw.co/">undraw.co</a>
+    </figcaption>
+</figure>
+
 ## What I have contributed to
 
 - [Mail::DMARC](https://github.com/msimerson/mail-dmarc)
