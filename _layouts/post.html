@@ -6,7 +6,10 @@ layout: default
 		{%- if page.image -%} style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('{{ page.image }}')" {%- endif -%}
 	>
 	<div>
-		<h1 class="text-4xl md:text-6xl font-bold font-welcome" itemprop="name headline">{{ page.title | escape }}</h1>
+		<h1 class="text-4xl md:text-6xl font-bold font-welcome leading-tight tracking-wide" itemprop="name headline">{{ page.title | escape }}</h1>
+		{% if page.subtitle %}
+			<h2 class="text-4xl md:text-3xl font-bold font-welcome" itemprop="name subtitle">{{ page.subtitle | escape }}</h2>
+		{% endif %}
 		<p class="ml-10 font-bold text-sm">
 			{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
 				<time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
