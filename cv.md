@@ -47,6 +47,7 @@ game development and game AI.
         <li>VueJS</li>
         <li>NodeJS</li>
       </ul></li>
+      <li>C#</li>
       <li>HTML & CSS<ul>
         <li>TailwindCSS</li>
         <li>SCSS</li>
@@ -59,7 +60,6 @@ game development and game AI.
     <ul>
       <li>Kotlin and Java</li>
       <li>Ruby</li>
-      <li>C#</li>
       <li>Golang</li>
       <li>Python</li>
     </ul>
@@ -113,6 +113,11 @@ game development and game AI.
     <ul>
       <li>AWS EC2</li>
       <li>Netlify</li>
+    </ul>
+  </li>
+  <li class="list-none pr-10">Other
+    <ul>
+      <li>Godot</li>
     </ul>
   </li>
 </ul>
