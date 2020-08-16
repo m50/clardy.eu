@@ -3,7 +3,7 @@ layout: page
 title: CV
 permalink: /cv
 ---
-<div class="flex justify-left content-center items-center">
+<div class="flex justify-left content-center items-center w-full">
   <img class="hidden md:inline-block rounded-full mr-8" src="https://www.gravatar.com/avatar/febc3d5f662cd665425a91c67e68bedc?s=200" />
   <div>
   <h1 class="text-3xl">
@@ -11,22 +11,23 @@ permalink: /cv
     <span class="print:hidden inline-block">Resumé/CV</span>
   </h1>
   {%- include social.html -%}
-  <ul class="hidden print:block font-mono">
-    <li>e: marisa@clardy.eu</li>
-    <li>t: 512-228-4291</li>
-    <li>w: https://clardy.eu</li>
-  </ul>
+  <div class="hidden print:block font-mono flex justify-around w-full">
+    <span><b>e:</b>marisa@clardy.eu</span>
+    <span><b>t:</b>512-228-4291</span>
+    <span><b>w:</b>https://clardy.eu</span>
+  </div>
   </div>
 </div>
 
 ## Personal Notes
 
 I am an active learner, constantly relaying new ideas and information to my team.
-
-I am interested in constant, active collaboration with my colleagues.
+I have a huge passion for learning, and am always learning new things.
 
 I have since a young age actively been learning and teaching software tools, including
 game development and game AI.
+
+<!-- <div class="hidden print:block" style="page-break-after: always;">&nbsp;</div> -->
 
 ## Skills and Abilities
 
@@ -40,18 +41,15 @@ game development and game AI.
     <ul>
       <li>PHP<ul>
         <li>Laravel</li>
-        <li>Symfony</li>
       </ul></li>
       <li>JavaScript<ul>
-        <li>React</li>
-        <li>VueJS</li>
+        <li>React and VueJS</li>
         <li>NodeJS</li>
       </ul></li>
       <li>C#</li>
       <li>HTML & CSS<ul>
         <li>TailwindCSS</li>
         <li>SCSS</li>
-        <li>Bootstrap</li>
       </ul></li>
     </ul>
   </li>
@@ -69,6 +67,8 @@ game development and game AI.
 <div class="inline-block height-full align-top">
 <h3>Other</h3>
 <ul>
+  <li class="list-none pr-10">Linux</li>
+  <li class="list-none pr-10">FreeBSD</li>
   <li class="list-none pr-10">Docker</li>
   <li class="list-none pr-10">Git
     <ul>
@@ -94,32 +94,6 @@ game development and game AI.
       <li>RabbitMQ</li>
     </ul>
   </li>
-  <li class="list-none pr-10">E-Mail
-    <ul>
-      <li>Postfix</li>
-      <li>Amavisd</li>
-      <li>SpamAssassin</li>
-      <li>Dovecot</li>
-      <li>GSuite</li>
-    </ul>
-  </li>
-  <li class="list-none pr-10">Web Servers
-    <ul>
-      <li>Apache</li>
-      <li>NGinX</li>
-    </ul>
-  </li>
-  <li class="list-none pr-10">Hosting Environments
-    <ul>
-      <li>AWS EC2</li>
-      <li>Netlify</li>
-    </ul>
-  </li>
-  <li class="list-none pr-10">Other
-    <ul>
-      <li>Godot</li>
-    </ul>
-  </li>
 </ul>
 </div>
 
@@ -130,8 +104,7 @@ game development and game AI.
 - **TitanHQ**
   - Location: [Salthill, Ireland](https://www.google.com/maps/place/TitanHQ+eMail+and+Web+Security/@53.2635584,-9.0731129,17z/data=!3m1!4b1!4m5!3m4!1s0x485b9689b5dcbd0b:0x3c4ffb292b9292d7!8m2!3d53.2635552!4d-9.0709242)
   - Positions:
-    - *Senior Developer*
-      - Time Period: May 2018 - Present
+    - *Senior Developer* (May 2018 - Present)
       - Lead developer on [SpamTitan](https://www.spamtitan.com/)
 
         > SpamTitan is a globally deployed Enterprise grade malware and spam filtering product
@@ -140,20 +113,17 @@ game development and game AI.
         > and mentoring the more senior engineers in the company on these modern tools,
         > and advancements in the feature set of the product. Modernized the CI/CD dev flow
         > to utilize docker, in a move towards a containerized environment for the product.
-    - *Support Engineer*
-      - Time Period: May 2016 - May 2018
+    - *Support Engineer* (May 2016 - May 2018)
       - Achievement: Developed a number of internal systems for the company.
 
 ## Education
 
-- **NYU Tandon School of Engineering**
+- **NYU Tandon School of Engineering** (Aug. 2012 - May 2013)
   - *Location*: [Brooklyn, NY](https://www.google.com/maps/place/New+York+University+Tandon+School+of+Engineering/@40.6942076,-73.9887677,17z/data=!3m1!4b1!4m5!3m4!1s0x89c25a4a4d8396f3:0xda9b313d596491f7!8m2!3d40.6942036!4d-73.986579)
   - *Degree Path*: BS Computer Engineering
-  - *Time Period*: Aug. 2012 - May 2013
-- **James Bowie High School**
+- **James Bowie High School** (Aug. 2008 - May 2012)
   - *Location*: [Austin, Tx](https://www.google.com/maps/place/James+Bowie+High+School/@30.1876581,-97.860686,17z/data=!3m1!4b1!4m5!3m4!1s0x865b4c0e1e8e050b:0x9801923ccd64699f!8m2!3d30.1876535!4d-97.8584973)
   - *Degree Path*: High School
-  - *Time Period*: Aug. 2008 - May 2012
   - *Achievements of Note*:
     - 1st Place in District Science Fair in Computer Science for a path finding algorithm
     - Lead Autonomy Developer for FRC team
