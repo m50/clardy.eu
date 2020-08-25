@@ -37,7 +37,7 @@ game development and game AI.
 <h3>Programming</h3>
 <ul>
   <li class="list-none">
-    <span class="italic">Experienced with</span>
+    <span class="italic">Currently Experienced</span>
     <ul>
       <li>PHP<ul>
         <li>Laravel</li>
@@ -54,7 +54,7 @@ game development and game AI.
     </ul>
   </li>
   <li class="list-none">
-    <span class="italic">Minimal Experience but love to learn</span>
+    <span class="italic">Past Experience</span>
     <ul>
       <li>Kotlin and Java</li>
       <li>Ruby</li>
@@ -65,7 +65,7 @@ game development and game AI.
 </ul>
 </div>
 <div class="inline-block height-full align-top">
-<h3>Other</h3>
+<h3>Other Skills/Tools</h3>
 <ul>
   <li class="list-none pr-10">Linux</li>
   <li class="list-none pr-10">FreeBSD</li>
