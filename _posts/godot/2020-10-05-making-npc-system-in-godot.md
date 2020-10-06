@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Making Dialog and Navigation for NPCs in Godot"
+title: "Making Dialogue and Navigation for NPCs in Godot"
 categories: [godot]
 image: https://miro.medium.com/fit/c/1838/551/1*eKkwVGe7_wF14PkJiotSdg.jpeg
 ---
@@ -429,7 +429,7 @@ private void _OnTimeChanged(uint by)
 ```
 
 As we can see, anytime the time changes, we get the current event from our scheduler
-instance, and then if the current even is different, we set a new current event.
+instance, and then if the current event is different, we set a new current event.
 `_CurEvent` is a property that kicks off new navigation.
 
 ```csharp
@@ -631,12 +631,14 @@ have broken this up into multiple articles, because wow, this is long!). It's im
 to re-iterate that if you are a gdscript developer, all of this is possible there
 as well, the key differences being that you won't be able to pre-define a data
 model like I did, and instead everything existing in a dictionary, and you will
-be required to use JSON rather than YAML.
+be required to use JSON rather than YAML (though, there is a [yaml plugin],
+so if you can build the C++ code for it, you should be good to go).
 
 Keep an eye out for my blog post actually discussing my game, as well as future
 posts about other cool things I build for the game.
 
-And if you read to hear, you deserve a cookie! 🍪
+And if you read to here, you deserve a cookie! 🍪
 
 [RichTextLabel]: https://docs.godotengine.org/en/stable/tutorials/gui/bbcode_in_richtextlabel.html
 [Blipsounds]: https://www.youtube.com/watch?v=4W57Wy6veUM&feature=emb_logo
+[yaml plugin]: https://github.com/Beliaar/godot-yaml
