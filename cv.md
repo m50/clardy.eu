@@ -101,10 +101,14 @@ game development and game AI.
 
 ## Work Experience
 
-- **TitanHQ**
-  - Location: [Salthill, Ireland](https://www.google.com/maps/place/TitanHQ+eMail+and+Web+Security/@53.2635584,-9.0731129,17z/data=!3m1!4b1!4m5!3m4!1s0x485b9689b5dcbd0b:0x3c4ffb292b9292d7!8m2!3d53.2635552!4d-9.0709242)
+- **Happy Money**
   - Positions:
-    - *Senior Developer* (May 2018 - Present)
+    - *Software Engineer* (October 2020 - Present)
+      - Salesforce Developer on Loan Origination platform.
+
+- **TitanHQ**
+  - Positions:
+    - *Senior Developer* (May 2018 - October 2020)
       - Lead developer on [SpamTitan](https://www.spamtitan.com/)
 
         > SpamTitan is a globally deployed Enterprise grade malware and spam filtering product
