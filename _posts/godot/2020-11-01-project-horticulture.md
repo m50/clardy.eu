@@ -42,6 +42,8 @@ The town of Geistwald Forge, right on the edge of the forest and a Human Fortres
 is a small forge city, looking to advance in wealth. This is where the cottage is
 located.
 
+Screenshots and information will come in future articles.
+
 # Technical Thoughts
 
 The game is developed, as mentioned, with the Godot Game Engine, using C#.
