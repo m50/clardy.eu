@@ -39,18 +39,20 @@ game development and game AI.
   <li class="list-none">
     <span class="italic">Currently Experienced</span>
     <ul>
-      <li>PHP<ul>
-        <li>Laravel</li>
-      </ul></li>
+      <li>C#</li>
+      <li>Salesforce Apex</li>
       <li>JavaScript<ul>
         <li>React and VueJS</li>
         <li>NodeJS</li>
       </ul></li>
-      <li>C#</li>
       <li>HTML & CSS<ul>
         <li>TailwindCSS</li>
         <li>SCSS</li>
       </ul></li>
+      <li>PHP<ul>
+        <li>Laravel</li>
+      </ul></li>
+      <li>Bash/Shell scripts</li>
     </ul>
   </li>
   <li class="list-none">
@@ -58,8 +60,9 @@ game development and game AI.
     <ul>
       <li>Kotlin and Java</li>
       <li>Ruby</li>
-      <li>Golang</li>
+      <li>Go</li>
       <li>Python</li>
+      <li>Terraform</li>
     </ul>
   </li>
 </ul>
@@ -68,18 +71,17 @@ game development and game AI.
 <h3>Other Skills/Tools</h3>
 <ul>
   <li class="list-none pr-10">Linux</li>
-  <li class="list-none pr-10">FreeBSD</li>
   <li class="list-none pr-10">Docker</li>
   <li class="list-none pr-10">Git
     <ul>
-      <li>Github</li>
       <li>Gitlab</li>
+      <li>Github</li>
     </ul>
   </li>
   <li class="list-none pr-10">CI/CD
     <ul>
       <li>Gitlab CI/CD</li>
-      <li>TravisCI</li>
+      <li>Github Actions</li>
     </ul>
   </li>
   <li class="list-none pr-10">Databases
