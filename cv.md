@@ -41,7 +41,7 @@ game development and game AI.
     <ul>
       <li>C#</li>
       <li>Salesforce Apex</li>
-      <li>JavaScript<ul>
+      <li>JavaScript/TypeScript<ul>
         <li>React and VueJS</li>
         <li>NodeJS</li>
       </ul></li>
