@@ -36,4 +36,8 @@ permalink: /oss-projects
     - A command line tool for checking for problematic terminology in documentation
         that may make someone trying to learn to feel discouraged.
     - Inspired by a tweet by [Erika Heidi](https://twitter.com/erikaheidi/status/1224292904283201536?s=20)
-
+- [Godot C# Autowire](https://github.com/m50/Godot-CSharp-Autowire)
+    - A set of attributes and extensions for setting up autowiring in the Godot game engine.
+- [Godot C# Node/Resource Export](https://github.com/m50/Godot-CSharp-Node-Exports)
+    - A set attributes and a plugin for exporting custom Nodes and Resources made in C#.
+    - Replicates the GDScript `class_name` functionality in Godot.
