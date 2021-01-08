@@ -11,7 +11,7 @@ permalink: /cv
     <span class="print:hidden inline-block">Resumé/CV</span>
   </h1>
   {%- include social.html -%}
-  <div class="hidden print:block font-mono flex justify-around w-full">
+  <div class="hidden print:block font-mono flex justify-around w-full text-xs">
     <span><b>e:</b>marisa@clardy.eu</span>
     <span><b>t:</b>512-228-4291</span>
     <span><b>w:</b>https://clardy.eu</span>
