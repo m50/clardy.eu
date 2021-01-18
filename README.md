@@ -2,9 +2,11 @@
 
 # clardy.eu
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0138ede1-1d4b-4f41-b6f8-e6e8b3003d23/deploy-status)](https://app.netlify.com/sites/marisa-clardy/deploys)
+
 https://clardy.eu - My website
 
-## Tools used to make this:
+## Tools used to make this:
 
 - [Netlify for hosting](https://www.netlify.com/)
 - [Jekyll](https://jekyllrb.com/)
