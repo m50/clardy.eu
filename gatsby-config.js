@@ -3,16 +3,17 @@ module.exports = {
     title: "clardy.eu",
   },
   plugins: [
-    "gatsby-plugin-netlify-cms",
-    "gatsby-plugin-styled-components",
-    "gatsby-plugin-sharp",
-    "gatsby-plugin-react-helmet",
-    `gatsby-plugin-typescript`,
+    'gatsby-plugin-netlify-cms',
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-typescript',
+    'gatsby-plugin-postcss',
+    'gatsby-plugin-svgr',
     // "gatsby-plugin-sitemap",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
+        icon: "src/images/icon.svg",
       },
     },
     "gatsby-transformer-remark",
