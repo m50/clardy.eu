@@ -17,7 +17,15 @@ module.exports = {
       },
     },
     "gatsby-transformer-remark",
-    "gatsby-plugin-mdx",
+    {
+      resolve: "gatsby-plugin-mdx",
+      options: {
+        extensions: [`.mdx`, `.md`],
+        defaultLayouts: {
+          default: require.resolve("./src/templates/MdxLayout.jsx"),
+        },
+      },
+    },
     "gatsby-transformer-sharp",
     {
       resolve: "gatsby-source-filesystem",
@@ -34,13 +42,6 @@ module.exports = {
         path: "./src/pages/",
       },
       __key: "pages",
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `markdown-pages`,
-        path: `./src/markdown-pages`,
-      },
     },
   ],
 };

@@ -28,19 +28,19 @@ const IndexPage = () => {
           </div>
         </div>
 
-        <main class="lg:w-1/3 w-auto text-lg leading-loose mt-20 mb-40 md:mx-auto" aria-label="Content">
-          <div class="flex flex-col md:flex-row items-start mx-5 my-20 justify-between items-center">
+        <main className="lg:w-1/3 w-auto text-lg leading-loose mt-20 mb-40 md:mx-auto" aria-label="Content">
+          <div className="flex flex-col md:flex-row items-start mx-5 my-20 justify-between items-center">
             <WorkAs className="fill-current w-full md:w-1/3 p-5 h-full" />
-            <p class="w-full px-2 md:w-2/3">
-              <span class="block text-2xl bold">I currently work as</span> a Salesforce engineer for Happy Money,
+            <p className="w-full px-2 md:w-2/3">
+              <span className="block text-2xl bold">I currently work as</span> a Salesforce engineer for Happy Money,
               on the Loan Origination platform. I am helping to expand the Loan Origination platform to fit future
               business needs.
             </p>
           </div>
-          <div class="flex flex-col md:flex-row items-start mx-5 my-20 justify-between items-center">
+          <div className="flex flex-col md:flex-row items-start mx-5 my-20 justify-between items-center">
             <RecentWork className="fill-current w-full md:w-1/3 p-5 h-full" />
-            <p class="w-full px-2 md:w-2/3">
-              <span class="block text-2xl bold">Recently I worked as</span> a Senior Developer on SpamTitan at TitanHQ. I am working primarily
+            <p className="w-full px-2 md:w-2/3">
+              <span className="block text-2xl bold">Recently I worked as</span> a Senior Developer on SpamTitan at TitanHQ. I am working primarily
               on evolving a legacy codebase to modern standards. Working in Laravel for API generation,
               as well as modernizing framework-less PHP code as well. I work on the full stack,
               working on both the front-end web-GUI as well as the appliance back-end, and the
@@ -48,18 +48,18 @@ const IndexPage = () => {
             </p>
           </div>
 
-          <div class="flex flex-col md:flex-row items-start mx-5 my-20 justify-between items-center">
+          <div className="flex flex-col md:flex-row items-start mx-5 my-20 justify-between items-center">
             <Contribute className="fill-current w-full md:w-1/3 p-5 h-full" />
-            <p class="w-full px-2 md:w-2/3">
-              <span class="block text-2xl bold">I contribute</span> my freetime to open source software.
-              See the <a class="text-indigo-400 no-underline hover:underline" href="/oss-projects">projects</a> page to see what I have worked on.
+            <p className="w-full px-2 md:w-2/3">
+              <span className="block text-2xl bold">I contribute</span> my freetime to open source software.
+              See the <a className="text-indigo-400 no-underline hover:underline" href="/oss-projects">projects</a> page to see what I have worked on.
             </p>
           </div>
 
-          <div class="flex flex-col md:flex-row items-start mx-5 my-20 justify-between items-center">
+          <div className="flex flex-col md:flex-row items-start mx-5 my-20 justify-between items-center">
             <Outside className="fill-current w-full md:w-1/3 p-5 h-full" />
-            <p class="w-full px-2 md:w-2/3">
-              <span class="block text-2xl bold">Outside of the tech sphere</span>
+            <p className="w-full px-2 md:w-2/3">
+              <span className="block text-2xl bold">Outside of the tech sphere</span>
               I have a passion for board games, love to travel and
               see new things.
             </p>
