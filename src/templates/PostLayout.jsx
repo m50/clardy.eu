@@ -3,8 +3,7 @@ import DefaultLayout from './DefaultLayout';
 import { graphql } from "gatsby";
 
 const PostLayout = ({ data }) => {
-	const { markdownRemark } = data;
-	const { frontmatter, html } = markdownRemark;
+	const { frontmatter, html } = data.markdownRemark;
 	const headerBG = { backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('${frontmatter.image}')` };
 	return (
 		<DefaultLayout>
@@ -35,18 +34,18 @@ const PostLayout = ({ data }) => {
 
 export default PostLayout;
 
-// export const pageQuery = graphql`
-//   query($slug: String!) {
-//     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
-//       html
-//       frontmatter {
-// 				slug
-// 				title
-// 				layout
-// 				date(formatString: "MMMM DD, YYYY")
-// 				dateModified(formatString: "MMMM DD, YYYY")
-//       }
-//     }
-//   }
-// `;
+export const pageQuery = graphql`
+  query($slug: String!) {
+    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+      html
+      frontmatter {
+				slug
+				title
+				image
+				date(formatString: "MMMM DD, YYYY")
+				dateModified(formatString: "MMMM DD, YYYY")
+      }
+    }
+  }
+`;
 

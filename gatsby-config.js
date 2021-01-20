@@ -20,7 +20,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-mdx",
       options: {
-        extensions: [`.mdx`, `.md`],
+        extensions: ['.mdx'],
         defaultLayouts: {
           default: require.resolve("./src/templates/MdxLayout.jsx"),
         },
@@ -42,6 +42,14 @@ module.exports = {
         path: "./src/pages/",
       },
       __key: "pages",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "posts",
+        path: "./src/posts/",
+      },
+      __key: "posts",
     },
   ],
 };
