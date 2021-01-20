@@ -10,8 +10,8 @@ A farming/life action RPG of magic, discovery, and ecological conservationism.
 
 # Table of Contents
 
-* TOC
-{:toc}
+```toc
+```
 
 # Introduction
 

@@ -8,8 +8,8 @@ dateModified: 2021-01-19
 
 # Table of Contents
 
-* TOC
-{:toc}
+```toc
+```
 
 # Introduction
 
