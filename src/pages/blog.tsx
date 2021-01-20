@@ -1,5 +1,5 @@
 import * as React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import DefaultLayout from '../templates/DefaultLayout';
 
 interface Node {
@@ -28,10 +28,10 @@ const Blog: React.FunctionComponent<Props> = (props: Props) => {
             return (
               <li className="p-2 w-full md:w-1/2 lg:w-1/3 2xl:w-1/4" key={idx}>
                 <section className="border-l-2 border-indigo-600 bg-gray-200 p-5 hover:bg-gray-300 w-full">
-                  <a href={`/${frontmatter.slug}`}>
+                  <Link to={`/${frontmatter.slug}`}>
                     <h3 className="text-2xl bold text-indigo-600">{frontmatter.title}</h3>
                     <ul><li className="ml-3 mt-2 text-sm">Released: {frontmatter.date}</li></ul>
-                  </a>
+                  </Link>
                 </section>
               </li>
             )

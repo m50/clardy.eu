@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql, StaticQuery } from "gatsby"
+import { graphql, StaticQuery, Link } from "gatsby"
 import { ReactComponent as Logo } from '../images/icon.svg';
 
 interface Props { }
@@ -27,16 +27,16 @@ const Header: React.FunctionComponent<Props> = (_props: Props) => (
         <>
           <header className="h-16 print:hidden flex items-center content-center justify-between bg-indigo-500 py-3 text-white fixed right-0 left-0 top-0 md:relative">
             <div></div>
-            <a key="large" className="hidden sm:inline-block uppercase text-xl tracking-wider" rel="author" href="/">
+            <Link key="large" className="hidden sm:inline-block uppercase text-xl tracking-wider" rel="author" to="/">
               <Logo className="w-12 h-12 inline" />&nbsp;Marisa Clardy
-          </a>
+            </Link>
             <nav>
               {data.allSitePage.nodes.map(node => {
-                return <a key={node.path} className="uppercase text-lg flex-grow mx-3 hover:text-indigo-800" href={node.path}>{
+                return <Link key={node.path} className="uppercase text-lg flex-grow mx-3 hover:text-indigo-800" to={node.path}>{
                   node.internalComponentName
                     .replace('Component', '')
                     .replace(/([A-Z])/g, ' $1')
-                }</a>
+                }</Link>
               })}
             </nav>
             <div></div>
