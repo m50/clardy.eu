@@ -1,4 +1,10 @@
 module.exports = {
+  purge: [
+    './src/**/*.mdx',
+    './src/**/*.md',
+    './src/**/*.jsx',
+    './src/**/*.tsx',
+  ],
   theme: {
     extend: {
       screens: {
