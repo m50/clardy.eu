@@ -1,9 +1,7 @@
 import * as React from "react";
 import Social from "./Social";
 
-interface Props { }
-
-const Footer: React.FunctionComponent<Props> = (_props: Props) => {
+const Footer: React.FC = () => {
   return (
     <footer className="print:hidden w-full static py-10 border-t border-gray-400">
       <div className="flex flex-col md:flex-row justify-center content-center items-center w-full">

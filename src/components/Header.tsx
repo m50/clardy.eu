@@ -2,7 +2,6 @@ import React from "react";
 import { graphql, StaticQuery, Link } from "gatsby"
 import { ReactComponent as Logo } from '../images/icon.svg';
 
-interface Props { }
 interface Data { allSitePage: AllSitePage }
 interface AllSitePage { nodes: Node[] }
 interface Node {
@@ -11,7 +10,7 @@ interface Node {
   internalComponentName: string
 }
 
-const Header: React.FunctionComponent<Props> = (_props: Props) => (
+const Header: React.FC = () => (
   <StaticQuery
       query={graphql`
         query HeaderQuery {
