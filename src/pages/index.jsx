@@ -14,7 +14,7 @@ const IndexPage = () => {
       <div>
         <Header></Header>
         <div className="bg-gradient h-screen md:h-auto flex bg-indigo-400 text-white py-64 justify-center items-center content-center flex-col md:flex-row">
-          <div className="my-auto mx-auto md:mx-0 my-5">
+          <div className="my-auto mx-auto md:mx-0 md:my-5">
             <h1 className="text-3xl font-extrabold lg:text-7xl tracking-wider text-center lg:text-left font-welcome">Hi, I'm Marisa!</h1>
             <h2 className="mt-5 text-xl lg:text-4xl max-w-lg text-center lg:text-left">
             I'm an native Texan, LGBT, Software Developer, with a passion for constant learning.
@@ -29,7 +29,7 @@ const IndexPage = () => {
         </div>
 
         <main className="lg:w-1/3 w-auto text-lg leading-loose mt-20 mb-40 md:mx-auto" aria-label="Content">
-          <div className="flex flex-col md:flex-row items-start mx-5 my-20 justify-between items-center">
+          <div className="flex flex-col md:flex-row items-start mx-5 my-20 justify-between">
             <WorkAs className="fill-current w-full md:w-1/3 p-5 h-full" />
             <p className="w-full px-2 md:w-2/3">
               <span className="block text-2xl bold">I currently work as</span> a Salesforce engineer for Happy Money,
@@ -37,7 +37,7 @@ const IndexPage = () => {
               business needs.
             </p>
           </div>
-          <div className="flex flex-col md:flex-row items-start mx-5 my-20 justify-between items-center">
+          <div className="flex flex-col md:flex-row items-start mx-5 my-20 justify-between">
             <RecentWork className="fill-current w-full md:w-1/3 p-5 h-full" />
             <p className="w-full px-2 md:w-2/3">
               <span className="block text-2xl bold">Recently I worked as</span> a Senior Developer on SpamTitan at TitanHQ. I am working primarily
@@ -48,7 +48,7 @@ const IndexPage = () => {
             </p>
           </div>
 
-          <div className="flex flex-col md:flex-row items-start mx-5 my-20 justify-between items-center">
+          <div className="flex flex-col md:flex-row items-start mx-5 my-20 justify-between">
             <Contribute className="fill-current w-full md:w-1/3 p-5 h-full" />
             <p className="w-full px-2 md:w-2/3">
               <span className="block text-2xl bold">I contribute</span> my freetime to open source software.
@@ -56,7 +56,7 @@ const IndexPage = () => {
             </p>
           </div>
 
-          <div className="flex flex-col md:flex-row items-start mx-5 my-20 justify-between items-center">
+          <div className="flex flex-col md:flex-row items-start mx-5 my-20 justify-between">
             <Outside className="fill-current w-full md:w-1/3 p-5 h-full" />
             <p className="w-full px-2 md:w-2/3">
               <span className="block text-2xl bold">Outside of the tech sphere</span>
