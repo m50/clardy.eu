@@ -1,3 +1,5 @@
-import CMS from 'netlify-cms-app'
-// Initialize the CMS object
-CMS.init()
+import CMS from 'netlify-cms-app';
+import PostLayout from './templates/PostLayout';
+
+CMS.init();
+CMS.registerPreviewTemplate('posts', PostLayout);
