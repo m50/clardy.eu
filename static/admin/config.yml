@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: m50/clardy.eu
+  name: git-gateway
   branch: trunk
 publish_mode: editorial_workflow
 media_folder: "static/images"
