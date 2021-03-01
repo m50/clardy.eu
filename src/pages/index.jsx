@@ -9,6 +9,15 @@ import { ReactComponent as WorkAs } from '../images/undraw/completing.svg';
 import { ReactComponent as Outside } from '../images/undraw/imagination.svg';
 
 const IndexPage = () => {
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
   return (
     <MainLayout className="flex justify-between flex-col min-h-screen">
       <div>
