@@ -11,18 +11,9 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - label: Title
-        name: title
-        widget: string
-      - label: Slug
-        name: slug
-        widget: string
-      - label: Header Image
-        name: image
-        widget: image
-      - label: Created Date
-        name: date
-        widget: datetime
-      - label: Modified Date
-        name: dateModified
-        widget: datetime
+      - { label: Title, name: title, widget: string }
+      - { label: Slug, name: slug, widget: string }
+      - { label: Header Image, name: image, widget: image }
+      - { label: Created Date, name: date, widget: datetime }
+      - { label: Modified Date, name: dateModified, widget: datetime }
+      - { label: "Body", name: "body", widget: "markdown" }
