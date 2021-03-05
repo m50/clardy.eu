@@ -7,6 +7,7 @@ import { ReactComponent as RecentWork } from '../images/undraw/recent_work.svg';
 import { ReactComponent as Contribute } from '../images/undraw/proud_coder.svg';
 import { ReactComponent as WorkAs } from '../images/undraw/completing.svg';
 import { ReactComponent as Outside } from '../images/undraw/imagination.svg';
+import { Link } from "gatsby";
 
 const IndexPage = () => {
   return (
@@ -52,7 +53,7 @@ const IndexPage = () => {
             <Contribute className="fill-current w-full md:w-1/3 p-5 h-full" />
             <p className="w-full px-2 md:w-2/3">
               <span className="block text-2xl bold">I contribute</span> my freetime to open source software.
-              See the <a className="text-indigo-400 no-underline hover:underline" href="/oss-projects">projects</a> page to see what I have worked on.
+              See the <Link to="/projects" className="text-indigo-400 no-underline hover:underline">projects</Link> page to see what I have worked on.
             </p>
           </div>
 
