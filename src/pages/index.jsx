@@ -8,6 +8,7 @@ import { ReactComponent as Contribute } from '../images/undraw/proud_coder.svg';
 import { ReactComponent as WorkAs } from '../images/undraw/completing.svg';
 import { ReactComponent as Outside } from '../images/undraw/imagination.svg';
 import { Link } from "gatsby";
+import { Gravatar } from '../components/Gravatar';
 
 const IndexPage = () => {
   return (
@@ -22,7 +23,7 @@ const IndexPage = () => {
             </h2>
           </div>
           <div className="mt-10 md:mt-0 md:ml-10">
-            <img alt="Marisa" className="mx-auto rounded-full border-2 border-white shadow-lg" src="https://www.gravatar.com/avatar/febc3d5f662cd665425a91c67e68bedc?s=240" />
+            <Gravatar />
             <div className="py-5 mx-5">
               <Social />
             </div>
