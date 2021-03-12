@@ -13,7 +13,7 @@
         "build": "gatsby build && mv public _site",
         "serve": "gatsby serve",
         "clean": "gatsby clean",
-        "lint": "eslint . --ext ts --ext tsx'",
+        "lint": "eslint .",
         "lint:types": "tsc --pretty --noEmit",
         "lint:full": "yarn lint && yarn lint:types"
     },

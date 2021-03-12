@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "allowJs": true,
+    "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
     "baseUrl": "./src",
     "jsx": "react",
@@ -10,12 +11,10 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "plugins": [
-      {
-         "name": "typescript-styled-plugin"
-      }
+      { "name": "typescript-styled-plugin" }
     ],
     "target": "es2015"
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.jsx"],
-  "exclude": ["node_modules/*", "public/*", "_site/*"]
+  "include": ["src"],
+  "exclude": ["node_modules", "public", "_site"]
 }
