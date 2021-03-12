@@ -11,6 +11,13 @@ module.exports = {
     'gatsby-plugin-svgr',
     // "gatsby-plugin-sitemap",
     {
+      resolve: "@sentry/gatsby",
+      options: {
+        dsn: process.env.SENTRY_DSN,
+        sampleRate: 0.7,
+      },
+    },
+    {
       resolve: "gatsby-plugin-manifest",
       options: {
         icon: "src/images/icon.svg",
