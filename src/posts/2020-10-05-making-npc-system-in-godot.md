@@ -31,10 +31,10 @@ So I set out to implement everything. A few of my requirements:
 # Dialogue
 
 <div style="display: flex; justify-content: center;">
-<video width="720" height="480" controls>
-    <source src="{{ "/assets/videos/dialogue_window.mp4" | relative_url }}" type="video/mp4">
-Your browser does not support the video tag.
-</video>
+    <video width="720" height="480" controls>
+        <source src="/assets/videos/dialogue_window.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 </div>
 
 While Godot has a number of dialogue systems out there, they are all built in
@@ -62,7 +62,7 @@ elements as well as reading and displaying the Dialogue. The DialogueManager
 gets passed the path to a YAML or JSON file, and will read it in, building up the
 Dialogue object:
 
-```csharp
+```cs{numberlines: true}
 namespace PH.Services.DialogueSystem
 {
     public struct Dialogue
@@ -118,7 +118,7 @@ that we were going to end up doing that.
 
 And here is what that data object translates to, YAML wise:
 
-```yaml
+```yaml{numberlines: true}
 name: Jo
 introduction:
   text: |
@@ -179,7 +179,7 @@ Now that we can read the YAML file and build out dialogue, how do we display it?
 Well, on interact with the NPC (or whatever it is that has dialogue), the following
 is called:
 
-```csharp
+```cs{numberlines: true}
 _dialogueManager.Read(dialoguePath)
     .SetAnimationTree(_animationTree)
     .FindConversation(_state.RelationshipLevel)
@@ -198,7 +198,7 @@ Rendering is where it gets most interesting, here we load the text into a
 [RichTextLabel]'s BbcodeText property, build out the buttons that should exist
 in the responses list, and then display the dialogue window.
 
-```csharp
+```cs{numberlines: true}
 foreach (Control child in _actionsContainer.GetChildren())
     child.QueueFree();
 if (_conversation.Responses?.Count > 0)
@@ -242,7 +242,7 @@ speaking every letter of the alphabet, as well as the numbers 0-9, sped them up
 In the DialogueManager, I loaded in all the files into a dictionary with their
 character as the key, and the sound file as their value.
 
-```csharp
+```cs{numberlines: true}
 var chars = new string[] {
     "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
     "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",
@@ -258,7 +258,7 @@ I also created a queue of audio players, with a large number of audio players,
 so that they can play slightly over each other, without things being cut off, or
 just not playing at all.
 
-```csharp
+```cs{numberlines: true}
 _audioPlayers = new Queue<AudioStreamPlayer>();
 for (var i = 0; i < textSpeed / 2; i++)
 {
@@ -277,7 +277,7 @@ private void _OnStreamFinished(AudioStreamPlayer streamPlayer) =>
 Then in the `_Process` command, we start revealing characters, and when a new
 character appears, play it's audio byte.
 
-```csharp
+```cs{numberlines: true}
 public override void _Process(float delta)
 {
     // If we have no text to display, then exit early.
@@ -318,7 +318,7 @@ The last thing worth mentioning are those `[item]` bbcode statements.
 These allow me to add items to the player by just having it in the text that the
 character speaks.
 
-```csharp
+```cs{numberlines: true}
 namespace PH.Services.DialogueSystem.BBCode
 {
     [Tool, ClassName]
@@ -379,7 +379,7 @@ some internal functions to have an effect. Since resources have no access to the
 you have to pass the scene into them. To do this here, I pass it in via a signal, which
 is connected through a simple script on the RichTextLabel.
 
-```csharp
+```cs{numberlines: true}
 namespace PH.Services.DialogueSystem
 {
     public class BBText : RichTextLabel
@@ -413,7 +413,7 @@ an hour, etc. It's a pretty straightforward and simple time system. One importan
 thing to note is that anytime the minutes and hours change, signals are emitted.
 Those signals are tied into the NPC for scheduling purposes.
 
-```csharp
+```cs{numberlines: true}
 // These are some autowire attributes I created.
 // https://github.com/m50/Godot-CSharp-Autowire
 [Connect(TimeManager.ROOT_PATH, nameof(TimeManager.MinuteChanged))]
@@ -433,7 +433,7 @@ As we can see, anytime the time changes, we get the current event from our sched
 instance, and then if the current event is different, we set a new current event.
 `_CurEvent` is a property that kicks off new navigation.
 
-```csharp
+```cs{numberlines: true}
 private Scheduler.Event _CurEvent
 {
     get => _curEvent;
@@ -448,7 +448,7 @@ private Scheduler.Event _CurEvent
 Now, I won't go into the relatively complex data model for the scheduler, but
 I will just give a small snippet of the schedule:
 
-```yaml
+```yaml{numberlines: true}
 spring:
   monday:
     - from: 10
@@ -491,7 +491,7 @@ handles returning `Level` objects, which are what I am calling `scene` here.
 
 To get the current event, as seen earlier, it's pretty straight forward:
 
-```csharp
+```cs{numberlines: true}
 public Event GetCurrentEvent(uint hour, uint minute, uint day, TimeManager.Seasons season)
 {
     var events = _schedule.GetSpecialEvent(day, season);
@@ -508,7 +508,7 @@ then we get the first event that contains the specified hour/minute. One importa
 point of the contains is that time wrapping exists, so we need to account for `from`
 and `to` wrapping over the 24hr barrier.
 
-```csharp
+```cs{numberlines: true}
 public bool Contains(TimeStamp timeslot)
 {
     var pastFrom = From.Hour <= timeslot.Hour && (From.Minute <= timeslot.Minute || From.Minute == 0);
@@ -529,7 +529,7 @@ give a bit of an overview of all the components:
 
 
 <div style="display: flex; justify-content: center;">
-    <img width="500" src="{{ "/assets/images/schedule_datamodel.png" | relative_url }}"
+    <img width="500" src="/assets/images/schedule_datamodel.png"
         alt="Schedule Datamodel screenshot, containing: TimeStamp, Event, Season, SpecialEvent, Schedule">
 </div>
 
@@ -539,7 +539,7 @@ As seen earlier, we have a navigator class, which handles all the navigation
 (using Navigation2D nodes from Godot) for the character. Once we have a pointOfInterest,
 the Navigator class looks it up, and builds a path.
 
-```csharp
+```cs{numberlines: true}
 public void NavigateTo(string scene, string pointOfInterest)
 {
     // Return early if we don't know where we are going.
@@ -591,7 +591,7 @@ Once we have a path, we need to actually walk to it! This is handled in the `_Pr
 method. Here, we get the next point we are traveling to, and if we aren't currently
 traveling to a point, we move into a MoveTo state, which moves our character to that point.
 
-```csharp
+```cs{numberlines: true}
 public override void _Process(float delta)
 {
     if (_navPoints.Count == 0) return;

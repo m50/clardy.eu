@@ -16,7 +16,6 @@ module.exports = {
 		},
 		'gatsby-plugin-postcss',
 		'gatsby-plugin-svgr',
-		'gatsby-plugin-netlify',
 		{
 			resolve: 'gatsby-plugin-root-import',
 			options: {
@@ -45,6 +44,8 @@ module.exports = {
 		{
 			resolve: 'gatsby-transformer-remark',
 			options: {
+				gfm: true,
+				commonmark: true,
 				plugins: [
 					{
 						resolve: 'gatsby-remark-table-of-contents',
@@ -58,6 +59,12 @@ module.exports = {
 						},
 					},
 					'gatsby-remark-autolink-headers',
+					{
+						resolve: 'gatsby-remark-prismjs',
+						options: {
+							showLineNumbers: true,
+						},
+					},
 				],
 			},
 		},

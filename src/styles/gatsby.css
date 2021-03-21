@@ -1,0 +1,20 @@
+.gatsby-highlight pre[class*="language-"].line-numbers {
+    padding: 0;
+    padding-left: 2rem;
+    overflow: initial;
+}
+
+.gatsby-highlight-code-line {
+    background-color: #358ccb44;
+    display: block;
+    margin-right: -1em;
+    margin-left: -4em;
+    padding-right: 1em;
+    padding-left: 3em;
+    border-left: 1em solid #358ccb;
+}
+
+pre[class*="language-"]:after,
+pre[class*="language-"]:before {
+    display: none !important;
+}
