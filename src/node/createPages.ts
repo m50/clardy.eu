@@ -35,7 +35,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ actions, graphql,
 	result.data.allMarkdownRemark.edges.forEach(({ node }) => {
 		actions.createPage({
 			path: node.frontmatter.slug,
-			component: require.resolve('../templates/PostLayout.jsx'),
+			component: require.resolve('../templates/PostLayout.tsx'),
 			context: {
 				// additional data can be passed via context
 				slug: node.frontmatter.slug,
