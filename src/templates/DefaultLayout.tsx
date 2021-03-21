@@ -3,7 +3,7 @@ import Header from 'components/Header';
 import Footer from 'components/Footer';
 import MainLayout from './MainLayout';
 
-const DefaultLayout = ({ children }) => (
+const DefaultLayout: React.FC<React.PropsWithChildren<any>> = ({ children }) => (
 	<MainLayout className="flex justify-between flex-col min-h-screen">
 		<div>
 			<Header />

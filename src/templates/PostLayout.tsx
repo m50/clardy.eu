@@ -1,9 +1,26 @@
+/* eslint-disable react/no-danger */
 import * as React from 'react';
 import { graphql } from 'gatsby';
 import DefaultLayout from './DefaultLayout';
 
-const PostLayout = ({ data }) => {
-	const { frontmatter, html } = data.markdownRemark;
+interface Props {
+	data: {
+		markdownRemark: {
+			html: string;
+			frontmatter: {
+				image: string;
+				slug: string;
+				title: string;
+				subtitle?: string;
+				date: string;
+				dateModified: string;
+			};
+		};
+	};
+}
+
+const PostLayout: React.FC<Props> = ({ data: { markdownRemark } }) => {
+	const { frontmatter, html } = markdownRemark;
 	const headerBG = {
 		backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('${frontmatter.image}')`,
 	};
