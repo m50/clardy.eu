@@ -1,4 +1,5 @@
 import { GatsbyNode } from 'gatsby';
+import { join } from 'path';
 
 interface AllMarkdownRemark {
 	allMarkdownRemark: {
@@ -12,7 +13,9 @@ interface AllMarkdownRemark {
 	};
 }
 
-export const createPages: GatsbyNode['createPages'] = async ({ actions, graphql, reporter }) => {
+const template = 'PostLayout';
+
+export const createPosts: GatsbyNode['createPages'] = async ({ actions, graphql, reporter }) => {
 	const result = await graphql<AllMarkdownRemark>(`{
 		allMarkdownRemark(
 			sort: { order: DESC, fields: [frontmatter___date] }
@@ -35,7 +38,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ actions, graphql,
 	result.data.allMarkdownRemark.edges.forEach(({ node }) => {
 		actions.createPage({
 			path: node.frontmatter.slug,
-			component: require.resolve('../templates/PostLayout.tsx'),
+			component: join(process.cwd(), 'src', 'templates', `${template}.tsx`),
 			context: {
 				// additional data can be passed via context
 				slug: node.frontmatter.slug,
