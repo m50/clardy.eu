@@ -73,7 +73,7 @@ module.exports = {
 			options: {
 				extensions: ['.mdx'],
 				defaultLayouts: {
-					default: require.resolve('./src/templates/MdxLayout.jsx'),
+					default: require.resolve('./src/templates/MdxLayout.tsx'),
 				},
 			},
 		},
