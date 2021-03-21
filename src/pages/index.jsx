@@ -5,10 +5,7 @@ import MainLayout from 'templates/MainLayout';
 import Social from 'components/Social';
 import Footer from 'components/Footer';
 import { Gravatar } from 'components/Gravatar';
-import { ReactComponent as RecentWork } from 'images/undraw/recent_work.svg';
-import { ReactComponent as Contribute } from 'images/undraw/proud_coder.svg';
-import { ReactComponent as WorkAs } from 'images/undraw/completing.svg';
-import { ReactComponent as Outside } from 'images/undraw/imagination.svg';
+import Undraw from 'images/undraw';
 import { ReactComponent as Pagely } from 'images/pagely.svg';
 
 const heroClasses = `
@@ -43,7 +40,7 @@ const IndexPage = () => (
 			<Hero />
 			<main className={mainClasses} aria-label="Content">
 				<div className="flex flex-col md:flex-row items-start mx-5 my-20 justify-between">
-					<WorkAs className="fill-current w-full md:w-1/3 p-5 h-full" />
+					<Undraw name="work-as" className="fill-current w-full md:w-1/3 p-5 h-full" />
 					<p className="w-full px-2 md:w-2/3">
 						<div className="text-2xl bold">I currently work as</div> a software enginer at
 						&nbsp;<Pagely aria-label="pagely" className="h-5 inline-block" style={{ fill: '#0f4f72' }} />,
@@ -51,7 +48,7 @@ const IndexPage = () => (
 					</p>
 				</div>
 				<div className="flex flex-col md:flex-row items-start mx-5 my-20 justify-between">
-					<RecentWork className="fill-current w-full md:w-1/3 p-5 h-full" />
+					<Undraw name="recent-work" className="fill-current w-full md:w-1/3 p-5 h-full" />
 					<p className="w-full px-2 md:w-2/3">
 						<div className="text-2xl bold">Previously, I worked as</div> a
 						Senior Developer on <span style={{ color: '#fab559' }}>SpamTitan</span> at
@@ -64,7 +61,7 @@ const IndexPage = () => (
 				</div>
 
 				<div className="flex flex-col md:flex-row items-start mx-5 my-20 justify-between">
-					<Contribute className="fill-current w-full md:w-1/3 p-5 h-full" />
+					<Undraw name="contribute" className="fill-current w-full md:w-1/3 p-5 h-full" />
 					<p className="w-full px-2 md:w-2/3">
 						<div className="text-2xl bold">I contribute</div> my freetime to open source software.
 						See the
@@ -74,7 +71,7 @@ const IndexPage = () => (
 				</div>
 
 				<div className="flex flex-col md:flex-row items-start mx-5 my-20 justify-between">
-					<Outside className="fill-current w-full md:w-1/3 p-5 h-full" />
+					<Undraw name="outside" className="fill-current w-full md:w-1/3 p-5 h-full" />
 					<p className="w-full px-2 md:w-2/3">
 						<div className="text-2xl bold">Outside of the tech sphere</div>
 						I have a passion for board games, love to travel and

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { graphql, Link } from 'gatsby';
 import DefaultLayout from 'templates/DefaultLayout';
-import { ReactComponent as Updated } from 'images/undraw/updated.svg';
+import Undraw from 'images/undraw';
 
 interface Node {
 	frontmatter: {
@@ -19,7 +19,7 @@ const Blog: React.FunctionComponent<Props> = ({ data: { allMarkdownRemark: { nod
 	<DefaultLayout>
 		<div className="mx-2 md:mx-10 mb-10">
 			<section className="flex justify-between h-64 items-center">
-				<Updated className="h-full p-5" />
+				<Undraw name="updated" className="h-full p-5" />
 				<h1 className="text-4xl bold mb-5 w-full border-b border-gray-300">Recent posts</h1>
 			</section>
 			<ul className="flex flex-wrap justify-start">
