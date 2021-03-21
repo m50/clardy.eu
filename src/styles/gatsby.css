@@ -4,6 +4,10 @@
     overflow: initial;
 }
 
+pre[class*="language-"].line-numbers .line-numbers-rows {
+    width: 1.9rem !important;
+}
+
 .gatsby-highlight-code-line {
     background-color: #358ccb44;
     display: block;
