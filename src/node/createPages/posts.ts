@@ -1,35 +1,11 @@
 import { GatsbyNode } from 'gatsby';
 import { join } from 'path';
-
-interface AllMarkdownRemark {
-	allMarkdownRemark: {
-		edges: {
-			node: {
-				frontmatter: {
-					slug: string;
-				};
-			};
-		}[];
-	};
-}
+import { AllMarkdownRemark, query } from './posts.query';
 
 const template = 'PostLayout';
 
 export const createPosts: GatsbyNode['createPages'] = async ({ actions, graphql, reporter }) => {
-	const result = await graphql<AllMarkdownRemark>(`{
-		allMarkdownRemark(
-			sort: { order: DESC, fields: [frontmatter___date] }
-			limit: 1000
-		) {
-			edges {
-				node {
-					frontmatter {
-						slug
-					}
-				}
-			}
-		}
-	}`);
+	const result = await graphql<AllMarkdownRemark>(query);
 	// Handle errors
 	if (result.errors) {
 		reporter.panicOnBuild('Error while running GraphQL query.');
