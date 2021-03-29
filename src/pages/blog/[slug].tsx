@@ -2,7 +2,7 @@ import React from 'react';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
 import ErrorPage from 'next/error';
-import PostLayout from 'templates/PostLayout';
+import PostTemplate from 'templates/PostTemplate';
 import { Post } from 'collections/posts/post';
 import { getAllPosts, getPostBySlug } from 'lib/node-only/posts';
 
@@ -12,7 +12,7 @@ const Post: React.FC<Post> = (props) => {
     return <ErrorPage statusCode={404} />;
   }
 
-  return <PostLayout {...props} />;
+  return <PostTemplate {...props} />;
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }): Promise<{ props: Post }> => {

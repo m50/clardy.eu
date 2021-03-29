@@ -8,9 +8,7 @@ interface Props {
 const HeaderLink: React.FC<Props> = ({ page }) => (
   <Link href={page.path}>
     <a className="uppercase text-lg flex-grow mx-3 hover:text-indigo-800">
-      {page.internalComponentName
-        .replace('Component', '')
-        .replace(/([A-Z])/g, ' $1')}
+      {page.name}
     </a>
   </Link>
 );

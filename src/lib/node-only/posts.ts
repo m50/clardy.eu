@@ -39,9 +39,13 @@ export const getAllPosts = async () => {
     return postCache;
   }
   const slugs = await getPostSlugs();
-  postCache = (await Promise.all(
-    slugs.map(async (slug) => getPostBySlug(slug)),
-  )).filter((c) => c !== null) as Post[];
+  const seriesPromises = slugs
+    .map(async (slug) => getPostBySlug(slug));
+
+  const posts = (await Promise.all(seriesPromises))
+    .sort((series1, series2) => (new Date(series1.meta.dateModified) > new Date(series2.meta.dateModified) ? -1 : 1));
+
+  postCache = posts;
 
   return postCache;
 };

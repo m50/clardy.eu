@@ -9,7 +9,9 @@ const headerClasses = cl`
   bg-indigo-500 py-3 text-white fixed right-0 left-0 top-0 md:relative
 `;
 const pages: Page[] = [
-  { id: '', path: '', internalComponentName: '' },
+  { path: '/blog/', name: 'Blog' },
+  { path: '/cv/', name: 'Cv' },
+  { path: '/projects/', name: 'Projects' },
 ];
 
 export const Header: React.FC = () => (

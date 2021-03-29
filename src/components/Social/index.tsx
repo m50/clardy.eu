@@ -7,17 +7,17 @@ import DevTo from './DevTo';
 
 // eslint-disable-next-line no-undef
 const socials: JSX.Element[] = [
-	<Twitter />,
-	<Github />,
-	<Gitlab />,
-	<Instagram />,
-	<DevTo />,
+  <Twitter />,
+  <Github />,
+  <Gitlab />,
+  <Instagram />,
+  <DevTo />,
 ];
 
 const Social: React.FC = () => (
-	<ul className="print:hidden flex-grow flex justify-between py-3 h-5 content-center items-center">
-		{socials.map((S, idx: number) => <li className="list-none" key={idx}>{S}</li>)}
-	</ul>
+  <ul className="print:hidden flex-grow flex justify-between py-3 h-5 content-center items-center">
+    {socials.map((S, idx: number) => <li className="list-none" key={idx}>{S}</li>)}
+  </ul>
 );
 
 export default Social;

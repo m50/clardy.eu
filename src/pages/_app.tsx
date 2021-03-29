@@ -1,16 +1,13 @@
 import React from 'react';
 import type { AppProps } from 'next/app';
 import '../styles/tailwind.css';
-import DefaultLayout from 'templates/DefaultLayout';
+import DefaultTemplate from 'templates/DefaultTemplate';
 
-function App({ Component, pageProps, router }: AppProps) {
-  if (router.pathname === '/') {
-    return <Component {...pageProps} />;
-  }
+function App({ Component, pageProps }: AppProps) {
   return (
-    <DefaultLayout>
+    <DefaultTemplate>
       <Component {...pageProps} />
-    </DefaultLayout>
+    </DefaultTemplate>
   );
 }
 

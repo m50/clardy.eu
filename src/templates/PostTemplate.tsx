@@ -4,14 +4,14 @@ import { Markdown } from 'components/Markdown';
 import { coy } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { Post } from 'collections/posts/post';
 import { cl } from 'lib/clean-lines';
-import DefaultLayout from './DefaultLayout';
+import PageTemplate from './PageTemplate';
 
-const PostLayout: React.FC<Post> = ({ content, meta }) => {
+const PostTemplate: React.FC<Post> = ({ content, meta }) => {
   const headerBG = {
     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('${meta.image}')`,
   };
   return (
-    <DefaultLayout>
+    <PageTemplate>
       <article className="pt-5 mb-40 md:mb-auto">
         <header style={headerBG}
           className={cl`
@@ -38,8 +38,8 @@ const PostLayout: React.FC<Post> = ({ content, meta }) => {
 
         <Markdown className="px-5" style={coy}>{content}</Markdown>
       </article>
-    </DefaultLayout>
+    </PageTemplate>
   );
 };
 
-export default PostLayout;
+export default PostTemplate;

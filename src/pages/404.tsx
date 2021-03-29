@@ -1,8 +1,9 @@
 import * as React from 'react';
 import Link from 'next/link';
+import PageTemplate from 'templates/PageTemplate';
 
 const NotFoundPage = () => (
-  <div>
+  <PageTemplate>
     <p>404 Not Found</p>
     <p>
       <Link href="/">
@@ -11,7 +12,7 @@ const NotFoundPage = () => (
         </a>
       </Link>
     </p>
-  </div>
+  </PageTemplate>
 );
 
 export default NotFoundPage;
