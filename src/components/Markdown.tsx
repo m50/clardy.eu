@@ -54,7 +54,7 @@ export const Markdown: React.FC<Props> = ({ className, children, allowDangerousH
       <SyntaxHighlighter
         language={language} style={style}
         className="border !rounded-2xl !py-5 !bg-gray-50 shadow-lg"
-        showLineNumbers
+        showLineNumbers wrapLines
       >
         {value}
       </SyntaxHighlighter>
