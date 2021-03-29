@@ -4,16 +4,16 @@ import { cl } from 'lib/clean-lines';
 import HeaderLink from './HeaderLink';
 import { Page } from './types';
 
-const headerClasses = cl`
-  h-16 print:hidden flex items-center content-center justify-between
-  bg-indigo-500 py-3 text-white fixed right-0 left-0 top-0 md:relative
-`;
 const pages: Page[] = [
   { path: '/blog/', name: 'Blog' },
   { path: '/cv/', name: 'Cv' },
   { path: '/projects/', name: 'Projects' },
 ];
 
+const headerClasses = cl`
+  h-16 print:hidden flex items-center content-center justify-between
+  bg-indigo-500 py-3 text-white fixed right-0 left-0 top-0 md:relative
+`;
 export const Header: React.FC = () => (
   <>
     <header className={headerClasses}>

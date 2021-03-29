@@ -1,16 +1,11 @@
-import proud_coder from "../images/undraw/proud_coder.svg"
+import Undraw from "../components/svg/undraw"
 import MdxTemplate from 'templates/MdxTemplate';
-
-export default ({ children }) => <MdxTemplate>{children}</MdxTemplate>;
 
 # OSS Projects
 
-<figure class="flex justify-center w-full h-64">
-    <img src={proud_coder} alt="Proud coder" />
-    <figcaption class="sr-only">
-        Proud coder illustration by <a href="https://undraw.co/">undraw.co</a>
-    </figcaption>
-</figure>
+<div className="flex justify-center w-full h-64">
+    <Undraw name="proud_coder" className="h-64" />
+</div>
 
 ## What I have contributed to
 
@@ -42,3 +37,5 @@ export default ({ children }) => <MdxTemplate>{children}</MdxTemplate>;
 - [ElephantMFA](https://github.com/elephantmfa/framework) (Work in Progress/Abandoned)
     - This is a framework for creating mail filters using PHP.
     - Based on Laravel and ReactPHP.
+
+export default ({ children }) => <MdxTemplate>{children}</MdxTemplate>;

@@ -4,7 +4,7 @@ export const cl = (strings: TemplateStringsArray, ...expr: string[]): string => 
     str += string + (expr[i] || '');
   });
 
-  str.replace(/\s/g, '');
+  str = str.replace(/\s+/g, ' ').trim();
 
   return str;
 };

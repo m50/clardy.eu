@@ -1,6 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Kalam|Noto+Sans|Raleway&display=swap');
 @tailwind base;
 @tailwind components;
 
 /* Write your styles below this line. */
+.prose ul >li.list-none::before {
+    display: none;
+}
+.prose ul > li.list-none {
+    padding-left: 0;
+}
 
 @tailwind utilities;

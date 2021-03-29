@@ -36,7 +36,7 @@ const PostTemplate: React.FC<Post> = ({ content, meta }) => {
           </div>
         </header>
 
-        <Markdown className="px-5" style={coy}>{content}</Markdown>
+        <Markdown className="px-5 prose-indigo max-w-none" style={coy}>{content}</Markdown>
       </article>
     </PageTemplate>
   );
