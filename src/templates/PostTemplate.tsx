@@ -1,7 +1,7 @@
 /* eslint-disable react/no-danger */
 import * as React from 'react';
 import { Markdown } from 'components/Markdown';
-import { coy } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { coy } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import { Post } from 'collections/posts/post';
 import { cl } from 'lib/clean-lines';
 import PageTemplate from './PageTemplate';

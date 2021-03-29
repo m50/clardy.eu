@@ -16,7 +16,7 @@ const socials: JSX.Element[] = [
 
 const Social: React.FC = () => (
   <ul className="print:hidden flex-grow flex justify-between py-3 h-5 content-center items-center">
-    {socials.map((S, idx: number) => <li className="list-none" key={idx}>{S}</li>)}
+    {socials.map((S, idx: number) => <li className="list-none !my-0" key={idx}>{S}</li>)}
   </ul>
 );
 

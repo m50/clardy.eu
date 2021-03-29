@@ -16,7 +16,7 @@ const IndexPage = () => (
       <div className="flex flex-col md:flex-row items-start mx-5 my-20 justify-between">
         <Undraw name="work-as" className="w-full md:w-1/3 p-5 h-full" />
         <p className="w-full px-2 md:w-2/3">
-          <div className="text-2xl bold">I currently work as</div> a software enginer at{' '}
+          <span className="text-2xl bold block">I currently work as</span> a software enginer at{' '}
           <Pagely aria-label="pagely" className="h-5 inline-block" style={{ fill: '#0f4f72' }} />,
           working on PHP microservices and a React front-end.
         </p>
@@ -24,7 +24,7 @@ const IndexPage = () => (
       <div className="flex flex-col md:flex-row items-start mx-5 my-20 justify-between">
         <Undraw name="recent-work" className="w-full md:w-1/3 p-5 h-full" />
         <p className="w-full px-2 md:w-2/3">
-          <div className="text-2xl bold">Previously, I worked as</div> a
+          <span className="text-2xl bold block">Previously, I worked as</span> a
           Senior Developer on <span style={{ color: '#fab559' }}>SpamTitan</span> at{' '}
           <span style={{ color: '#1fb9a0' }}>TitanHQ</span>.{' '}
           I worked primarily on evolving a legacy codebase to modern standards.
@@ -37,7 +37,7 @@ const IndexPage = () => (
       <div className="flex flex-col md:flex-row items-start mx-5 my-20 justify-between">
         <Undraw name="contribute" className="w-full md:w-1/3 p-5 h-full" />
         <p className="w-full px-2 md:w-2/3">
-          <div className="text-2xl bold">I contribute</div> my freetime to open source software.
+          <span className="text-2xl bold block">I contribute</span> my freetime to open source software.
           See the{' '}
           <Link href="/projects">
             <a className="text-indigo-400 no-underline hover:underline">
@@ -51,7 +51,7 @@ const IndexPage = () => (
       <div className="flex flex-col md:flex-row items-start mx-5 my-20 justify-between">
         <Undraw name="outside" className="w-full md:w-1/3 p-5 h-full" />
         <p className="w-full px-2 md:w-2/3">
-          <div className="text-2xl bold">Outside of the tech sphere</div>
+          <span className="text-2xl bold block">Outside of the tech sphere</span>
           I have a passion for board games, love to travel and
           see new things.
         </p>

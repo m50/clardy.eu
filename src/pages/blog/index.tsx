@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Link from 'next/link';
 import PageTemplate from 'templates/PageTemplate';
-import Undraw from 'components/images/undraw';
+import Undraw from 'components/svg/undraw';
 import { getAllPosts } from 'lib/node-only/posts';
 import { Post } from 'collections/posts/post';
 import { GetStaticProps } from 'next';
@@ -21,7 +21,7 @@ const Blog: React.FunctionComponent<Props> = ({ posts }: Props) => (
         {posts.map(({ meta, slug }, idx) => (
           <li className="p-2 w-full md:w-1/2 lg:w-1/3 2xl:w-1/4" key={idx}>
             <section className="border-l-2 border-indigo-600 bg-gray-200 p-5 hover:bg-gray-300 w-full">
-              <Link href={`/${slug}`}>
+              <Link href={`/blog/${slug}`}>
                 <a>
                   <h3 className="text-2xl bold text-indigo-600">{meta.title}</h3>
                   <ul><li className="ml-3 mt-2 text-sm">Released: {meta.date}</li></ul>

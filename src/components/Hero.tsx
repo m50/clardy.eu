@@ -19,7 +19,7 @@ const Hero = () => (
       </h2>
     </div>
     <div className="mt-10 md:mt-0 md:ml-10">
-      <Gravatar />
+      <Gravatar className="mx-auto" />
       <div className="py-5 mx-5">
         <Social />
       </div>

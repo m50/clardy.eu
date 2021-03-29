@@ -1,13 +1,181 @@
 @import url('https://fonts.googleapis.com/css?family=Kalam|Noto+Sans|Raleway&display=swap');
 @tailwind base;
 @tailwind components;
+@tailwind utilities;
 
 /* Write your styles below this line. */
-.prose ul >li.list-none::before {
+.prose ul > li.list-none::before,
+.prose ol > li.list-none::before {
     display: none;
 }
-.prose ul > li.list-none {
+.prose ul > li.list-none,
+.prose ol > li.list-none {
     padding-left: 0;
 }
 
-@tailwind utilities;
+@media print {
+    .prose ul > li,
+    .prose ol > li {
+        padding-left: 0;
+    }
+    .prose ul > li::before,
+    .prose ol > li::before {
+        display: none;
+    }
+}
+
+.bg-gradient {
+    background-image: linear-gradient(transparent, theme(colors.indigo.200));
+}
+
+/* Github flavoured markdown, thanks to: https://github.com/iandinwoodie/github-markdown-tailwindcss */
+
+.prose {
+    @apply text-gray-900;
+    @apply leading-loose;
+    @apply break-words;
+}
+
+.prose > * + * {
+    @apply mt-0;
+    @apply mb-2;
+}
+
+.prose li + li {
+    @apply mt-0;
+}
+
+.prose li > p + p {
+    @apply mt-6;
+}
+
+.prose strong {
+    @apply font-semibold;
+}
+
+.prose a {
+    @apply text-blue-600;
+    @apply font-semibold;
+}
+
+.prose strong a {
+    @apply font-bold;
+}
+
+.prose h1 {
+    @apply leading-tight;
+    @apply border-b;
+    @apply text-4xl;
+    @apply font-semibold;
+    @apply mb-2;
+    @apply mt-4;
+    @apply pb-2;
+}
+
+.prose h2 {
+    @apply leading-tight;
+    @apply border-b;
+    @apply text-2xl;
+    @apply font-semibold;
+    @apply mb-2;
+    @apply mt-4;
+    @apply pb-2;
+}
+
+.prose h3 {
+    @apply leading-snug;
+    @apply text-lg;
+    @apply font-semibold;
+    @apply mb-2;
+    @apply mt-4;
+}
+
+.prose h4 {
+    @apply leading-none;
+    @apply text-base;
+    @apply font-semibold;
+    @apply mb-2;
+    @apply mt-4;
+}
+
+.prose h5 {
+    @apply leading-tight;
+    @apply text-sm;
+    @apply font-semibold;
+    @apply mb-2;
+    @apply mt-4;
+}
+
+.prose h6 {
+    @apply leading-tight;
+    @apply text-sm;
+    @apply font-semibold;
+    @apply text-gray-600;
+    @apply mb-2;
+    @apply mt-4;
+}
+
+.prose blockquote {
+    @apply text-base;
+    @apply border-l-4;
+    @apply border-gray-300;
+    @apply pl-4;
+    @apply pr-4;
+    @apply text-gray-600;
+}
+
+.prose code {
+    @apply font-mono;
+    @apply text-sm;
+    @apply inline;
+    @apply bg-gray-200;
+    @apply rounded;
+    @apply px-1;
+    padding-top: 0.125rem;
+    padding-bottom: 0.125rem;
+}
+
+.prose pre {
+    @apply bg-gray-100;
+    @apply rounded;
+    @apply p-4;
+}
+
+.prose pre code {
+    @apply block;
+    @apply bg-transparent;
+    @apply p-0;
+    @apply overflow-visible;
+    @apply rounded-none;
+}
+
+.prose kbd {
+    @apply text-xs;
+    @apply inline-block;
+    @apply rounded;
+    @apply border;
+    @apply px-1;
+    @apply align-middle;
+    @apply font-normal;
+    @apply font-mono;
+    @apply shadow;
+    padding-top: 0.125rem;
+    padding-bottom: 0.125rem;
+}
+
+.prose table {
+    @apply text-base;
+    @apply border-gray-600;
+}
+
+.prose th {
+    @apply border;
+    @apply py-1;
+    @apply px-3;
+}
+
+.prose td {
+    @apply border;
+    @apply py-1;
+    @apply px-3;
+}

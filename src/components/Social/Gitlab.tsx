@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ReactComponent as GitlabIcon } from '../../images/gitlab.svg';
+import { ReactComponent as GitlabIcon } from '../svg/gitlab.svg';
 
 const Gitlab: React.FC<{}> = () => (
   <a rel="me"

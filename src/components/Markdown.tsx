@@ -29,7 +29,7 @@ interface Props {
  * example:
  * ```js
  * import React from 'react';
- * import { dark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+ * import { dark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
  * import { Markdown } from 'components/Markdown';
  *
  * export const Component = () => {
@@ -51,7 +51,7 @@ interface Props {
 export const Markdown: React.FC<Props> = ({ className, children, allowDangerousHtml, style }) => {
   const renderers: ReactMarkdown.ReactMarkdownPropsBase['renderers'] = {
     code: ({ language, value }) => (
-      <SyntaxHighlighter language={language} style={style}>
+      <SyntaxHighlighter language={language} style={style} className="border !rounded-2xl !py-5 !bg-gray-50 shadow-lg">
         {value}
       </SyntaxHighlighter>
     ),

@@ -6,7 +6,7 @@ import PostTemplate from 'templates/PostTemplate';
 import { Post } from 'collections/posts/post';
 import { getAllPosts, getPostBySlug } from 'lib/node-only/posts';
 
-const Post: React.FC<Post> = (props) => {
+const PostPage: React.FC<Post> = (props) => {
   const router = useRouter();
   if (!router.isFallback && !props?.slug) {
     return <ErrorPage statusCode={404} />;
@@ -14,6 +14,8 @@ const Post: React.FC<Post> = (props) => {
 
   return <PostTemplate {...props} />;
 };
+
+export default PostPage;
 
 export const getStaticProps: GetStaticProps = async ({ params }): Promise<{ props: Post }> => {
   const props = await getPostBySlug(params?.slug as string);

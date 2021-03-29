@@ -10,5 +10,5 @@ export interface Post {
   content: string;
 }
 
-export const isPost = (obj: any): obj is Post => typeof obj.content === 'string' && obj.meta
-  && typeof obj.meta.title === 'string';
+export const isPost = (obj: any): obj is Post => typeof obj.content === 'string'
+  && typeof obj.meta?.title === 'string' && typeof obj.slug === 'string';

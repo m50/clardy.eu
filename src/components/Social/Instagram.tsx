@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ReactComponent as InstragramIcon } from '../../images/instagram.svg';
+import { ReactComponent as InstragramIcon } from '../svg/instagram.svg';
 
 const Instagram: React.FC<{}> = () => (
   <a rel="me"

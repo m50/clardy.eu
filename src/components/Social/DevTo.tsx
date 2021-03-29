@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ReactComponent as DevToIcon } from '../../images/dev.to.svg';
+import { ReactComponent as DevToIcon } from '../svg/dev.to.svg';
 
 const DevTo: React.FC<{}> = () => (
   <a href="https://dev.to/m50" className="hover:text-indigo-800" title="Dev">

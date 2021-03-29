@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ReactComponent as TwitterIcon } from '../../images/twitter.svg';
+import { ReactComponent as TwitterIcon } from '../svg/twitter.svg';
 
 const Twitter: React.FC = () => (
   <a rel="me"

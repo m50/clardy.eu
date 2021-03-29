@@ -4,7 +4,7 @@ module.exports = {
   },
   purge: {
     layers: ['utilities'],
-    content: ['./src/**/*.{js,ts,jsx,tsx,mdx,md}'],
+    content: ['./src/**/*.{js,ts,jsx,tsx,mdx,md}', './src/styles/*.css'],
   },
   theme: {
     extend: {
