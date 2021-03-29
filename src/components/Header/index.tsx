@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Link from 'next/link';
-import { cl } from 'lib/clean-lines';
+import { cl } from 'lib/helpers';
 import HeaderLink from './HeaderLink';
 import { Page } from './types';
 

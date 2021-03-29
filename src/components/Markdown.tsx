@@ -5,7 +5,7 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import gfm from 'remark-gfm';
 import toc from 'remark-toc';
 import remarkSlug from 'remark-slug';
-import { cl } from 'lib/clean-lines';
+import { cl } from 'lib/helpers';
 
 interface Props {
   children: string;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { cl } from 'lib/clean-lines';
+import { cl } from 'lib/helpers';
 import Social from './Social';
 
 const Footer: React.FC = () => (

@@ -2,7 +2,7 @@ import * as React from 'react';
 import Link from 'next/link';
 import Hero from 'components/Hero';
 import Undraw from 'components/svg/undraw';
-import { cl } from 'lib/clean-lines';
+import { cl } from 'lib/helpers';
 import { ReactComponent as Pagely } from '../components/svg/pagely.svg';
 
 const mainClasses = cl`

@@ -1,5 +1,5 @@
 import React from 'react';
-import { cl } from 'lib/clean-lines';
+import { cl } from 'lib/helpers';
 
 interface Props {
   className?: string;

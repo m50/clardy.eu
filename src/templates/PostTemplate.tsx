@@ -3,7 +3,7 @@ import * as React from 'react';
 import { Markdown } from 'components/Markdown';
 import { coy } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import { Post } from 'collections/posts/post';
-import { cl } from 'lib/clean-lines';
+import { cl } from 'lib/helpers';
 import PageTemplate from './PageTemplate';
 
 const PostTemplate: React.FC<Post> = ({ content, meta }) => {

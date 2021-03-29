@@ -1,6 +1,6 @@
 /* eslint-disable indent */
 import React from 'react';
-import { cl } from 'lib/clean-lines';
+import { cl } from 'lib/helpers';
 import { ReactComponent as RecentWork } from './recent_work.svg';
 import { ReactComponent as Contribute } from './proud_coder.svg';
 import { ReactComponent as Completing } from './completing.svg';

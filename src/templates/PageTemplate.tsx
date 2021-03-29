@@ -1,4 +1,4 @@
-import { cl } from 'lib/clean-lines';
+import { cl } from 'lib/helpers';
 import * as React from 'react';
 
 const mainClasses = cl`
