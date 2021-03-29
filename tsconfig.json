@@ -30,8 +30,9 @@
     "isolatedModules": true
   },
   "include": [
-    "src"
-, "snapshotResolver.js"  ],
+    "src",
+    "snapshotResolver.js"
+  ],
   "exclude": [
     "node_modules",
     "out",

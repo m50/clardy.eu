@@ -1,6 +1,5 @@
 ---
 title: "Geistwald: A farming/life action RPG"
-slug: godot/2020/11/01/project-horticulture.html
 image: https://i.guim.co.uk/img/media/d143e03bccd1150ef52b8b6abd7f3e46885ea1b3/0_182_5472_3283/master/5472.jpg?width=1020&quality=85&auto=format&fit=max&s=5381baed444132de5bbf0830b0d990c7
 date: 2020-11-01
 dateModified: 2021-01-19

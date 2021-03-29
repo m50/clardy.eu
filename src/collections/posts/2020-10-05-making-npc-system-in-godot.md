@@ -1,6 +1,5 @@
 ---
 title: "Making Dialogue and Navigation for NPCs in Godot"
-slug: godot/2020/10/05/making-npc-system-in-godot.html
 image: https://miro.medium.com/fit/c/1838/551/1*eKkwVGe7_wF14PkJiotSdg.jpeg
 date: 2020-10-05
 dateModified: 2021-01-19

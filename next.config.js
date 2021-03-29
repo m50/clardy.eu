@@ -1,8 +1,17 @@
-const { NODE_ENV, CONTEXT } = process.env;
+const SentryWebpackPlugin = require('@sentry/webpack-plugin');
+const withMDX = require('@next/mdx')({
+  options: {
+    remarkPlugins: [],
+    rehypePlugins: [],
+  },
+})
+const { SENTRY_ORG, SENTRY_PROJECT, SENTRY_AUTH_TOKEN, NODE_ENV } = process.env;
+const { CONTEXT } = process.env;
 
 require('./prepare');
 
-module.exports = {
+module.exports = withMDX({
+	pageExtensions: ['js', 'jsx', 'mdx', 'tsx'],
 	target: 'experimental-serverless-trace',
 	productionBrowserSourceMaps: NODE_ENV === 'production',
 	env: {
@@ -15,9 +24,19 @@ module.exports = {
 			loader: 'frontmatter-markdown-loader',
 			options: { mode: ['react-component'] },
 		});
+		if (NODE_ENV === 'production' && SENTRY_ORG && SENTRY_PROJECT && SENTRY_AUTH_TOKEN) {
+			config.plugins.push(new SentryWebpackPlugin({
+				include: '.next',
+				ignore: ['node_modules'],
+				urlPrefix: "~/_next",
+				stripPrefix: ['webpack://_N_E/'],
+				ext: ['js', 'ts', 'map', 'jsbundle'],
+				release: process.env.COMMIT_REF,
+			}));
+		}
 
 		return config;
 	},
   redirects: async () => [
   ],
-};
+});

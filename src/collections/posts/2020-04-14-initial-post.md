@@ -1,6 +1,5 @@
 ---
 title: "Let there be light!"
-slug: welcome/2020/04/14/initial-post.html
 image: https://images.unsplash.com/photo-1584559106175-85ba196ebe2c?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixlib=rb-1.2.1&q=80&w=900
 date: 2020-04-14
 dateModified: 2021-01-19

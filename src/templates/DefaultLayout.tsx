@@ -1,10 +1,9 @@
 import * as React from 'react';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
-import MainLayout from './MainLayout';
 
 const DefaultLayout: React.FC<React.PropsWithChildren<any>> = ({ children }) => (
-	<MainLayout className="flex justify-between flex-col min-h-screen">
+	<div className="flex justify-between flex-col min-h-screen">
 		<div>
 			<Header />
 			<main aria-label="Content"
@@ -16,7 +15,7 @@ const DefaultLayout: React.FC<React.PropsWithChildren<any>> = ({ children }) => 
 			</main>
 		</div>
 		<Footer />
-	</MainLayout>
+	</div>
 );
 
 export default DefaultLayout;

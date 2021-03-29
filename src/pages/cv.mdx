@@ -1,4 +1,7 @@
 import Social from 'components/Social';
+import MdxLayout from 'templates/MdxLayout';
+
+export default ({ children }) => <MdxLayout>{children}</MdxLayout>;
 
 <div className="flex justify-left content-center items-center w-full">
   <img className="hidden md:inline-block rounded-full mr-8" src="https://www.gravatar.com/avatar/febc3d5f662cd665425a91c67e68bedc?s=200" />
@@ -24,7 +27,7 @@ I have a huge passion for learning, and am always learning new things.
 I have since a young age actively been learning and teaching software tools, including
 game development and game AI.
 
-<!-- <div className="hidden print:block" style="page-break-after: always;">&nbsp;</div> -->
+<!-- <div className="hidden print:block" style="page-break-after: always;">{' '}</div> -->
 
 ## Skills and Abilities
 

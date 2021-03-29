@@ -5,6 +5,7 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import gfm from 'remark-gfm';
 import toc from 'remark-toc';
 import remarkSlug from 'remark-slug';
+import { cl } from 'lib/clean-lines';
 
 interface Props {
   children: string;
@@ -65,7 +66,7 @@ export const Markdown: React.FC<Props> = ({ className, children, allowDangerousH
   if (allowDangerousHtml) {
     return (
       <ReactMarkdownHtml
-        className={`prose ${className ?? ''}`}
+        className={cl`prose ${className ?? ''}`}
         plugins={plugins}
         renderers={renderers}
         allowDangerousHtml
@@ -76,7 +77,7 @@ export const Markdown: React.FC<Props> = ({ className, children, allowDangerousH
   }
 
   return (
-    <ReactMarkdown className={`prose ${className ?? ''}`} plugins={plugins} renderers={renderers}>
+    <ReactMarkdown className={cl`prose ${className ?? ''}`} plugins={plugins} renderers={renderers}>
       {children}
     </ReactMarkdown>
   );
