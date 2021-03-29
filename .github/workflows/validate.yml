@@ -1,0 +1,44 @@
+name: Validate
+on:
+  push:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    name: ES Lint
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - name: Install Modules
+        run: yarn
+      - name: Run Tests
+        run: yarn lint
+
+  lint-types:
+    runs-on: ubuntu-latest
+    name: Type Check
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - name: Install Modules
+        run: yarn
+      - name: Run Tests
+        run: yarn lint:types
+
+  build:
+    runs-on: ubuntu-latest
+    name: Test Build
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - name: Install Modules
+        run: yarn
+      - name: Run Tests
+        run: yarn build
+      - run: ls public
