@@ -4,6 +4,11 @@
 @tailwind utilities;
 
 /* Write your styles below this line. */
+.linenumber {
+    @apply mr-5;
+    @apply border-r;
+}
+
 .prose ul > li.list-none::before,
 .prose ol > li.list-none::before {
     display: none;
