@@ -19,7 +19,6 @@ https://clardy.eu - My website
 - [Heroicons-ui](https://github.com/sschoger/heroicons-ui)
 - [Social Icons from Minima](https://github.com/jekyll/minima)
 - [Zondicons](http://www.zondicons.com/)
-- [Github Flavoured Markdown for Tailwind](https://github.com/iandinwoodie/github-markdown-tailwindcss)
 - [Illustrations by Undraw](https://undraw.co/)
 
 ## License and Copyright
