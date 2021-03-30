@@ -1,59 +1,32 @@
-# NextJS TypeScript Starter
+<p align="center"><img style="border-radius: 200px;" src="https://www.gravatar.com/avatar/febc3d5f662cd665425a91c67e68bedc?s=200" /></p>
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://oss.ninja/mit?organization=Marisa%20Clardy)
+# clardy.eu
 
-An opinionated starter template for building a TypeScript NextJS app on Netlify.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0138ede1-1d4b-4f41-b6f8-e6e8b3003d23/deploy-status)](https://app.netlify.com/sites/marisa-clardy/deploys)
+[![Insights](https://img.shields.io/badge/analytics-getinsights.io-blue)](https://getinsights.io/dashboard)
+[![Sentry](https://img.shields.io/badge/error%20tracking-sentry.io-red)](https://sentry.io/organizations/marisa/issues/?project=5671037)
 
-This comes with TypeScript, Github Actions, ESLint, Jest, TailwindCSS, and Netlify all setup out of the box.
+https://clardy.eu - My website
 
-___
-## General details and features
+## Tools used to make this:
 
-- Framework: [NextJS](https://nextjs.com/)
-- Markdown Rendering: [React Markdown](https://github.com/remarkjs/react-markdown)
-- Code Highlighting: [React Syntax Highlighter](https://github.com/react-syntax-highlighter/react-syntax-highlighter)
-- Hosting: [Netlify](https://www.netlify.com)
-- CMS: [Netlify CMS](https://www.netlifycms.org)
-- CI/CD: [Github Actions](https://github.com/features/actions)
-- Styling: [TailwindCSS](https://tailwindcss.com)
-- Language: [TypeScript](https://www.typescriptlang.org)
-- Lint: [ESLint](https://eslint.org) with opinionated form of [AirBNB rules](https://www.npmjs.com/package/eslint-config-airbnb)
-- Tests: [Jest](https://jestjs.io)
+- [Netlify for hosting](https://www.netlify.com/)
+    - [Netlify NextJS Plugin](https://github.com/netlify/netlify-plugin-nextjs)
+- [Next.js](https://www.nextjs.org)
+- [Sentry](https://sentry.io/)
+- [GetInsights](https://getinsights.io/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Heroicons-ui](https://github.com/sschoger/heroicons-ui)
+- [Social Icons from Minima](https://github.com/jekyll/minima)
+- [Zondicons](http://www.zondicons.com/)
+- [Github Flavoured Markdown for Tailwind](https://github.com/iandinwoodie/github-markdown-tailwindcss)
+- [Illustrations by Undraw](https://undraw.co/)
 
-___
-## Getting Started
+## License and Copyright
 
-Use this deploy button to get your own copy of the repository.
+All rights reserved.
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/m50/next-ts-netlify-starter&stack=cms)
-
-This button will do the following:
-
-Connect to your GitHub account and create a new repository with the name you specify
-- Deploy your copy of the repository and setup continuous deployment
-- Send an invite to the email address associated with your Netlify account
-- Accept the invite, set your password, then navigate to `/admin/` on your site to log in.
-
-Now you're all set, and you can start customizing your static site!
-
-## Local Development
-
-After using the deploy button above, clone your copy of the repository and run:
-
-```sh
-$ yarn install
-$ yarn start
-```
-
-Open http://localhost:3000 with your browser to see the result.
-
-You can start editing the page by modifying `src/pages/index.js`. The page auto-updates as you edit the file.
-
-API routes can be accessed on http://localhost:3000/api/hello. This endpoint can be edited in `src/pages/api/hello.js`.
-
-The `src/pages/api` directory is mapped to `/api/*`. Files in this directory are treated as API routes instead of React pages.
-
-___
-## License
-
-Released under the MIT License.
+© Copyright for the website and all related code belongs to Marisa Clardy.
+Only those with write access to this repository may use or redistribute anything within the
+repository without express permission, except for in the cases of utilities or artwork as
+described in the above section.
