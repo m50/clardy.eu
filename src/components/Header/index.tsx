@@ -12,7 +12,7 @@ const pages: Page[] = [
 
 const headerClasses = cl`
   h-16 print:hidden flex items-center content-center justify-between
-  bg-indigo-500 py-3 text-white fixed right-0 left-0 top-0 md:relative
+  bg-indigo-400 py-3 text-white fixed right-0 left-0 top-0 md:relative
 `;
 export const Header: React.FC = () => (
   <>
@@ -30,7 +30,7 @@ export const Header: React.FC = () => (
       </nav>
       <div />
     </header>
-    <div className="md:hidden">{' '}</div>
+    <div className="md:hidden h-16">&nbsp;</div>
   </>
 );
 
