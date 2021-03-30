@@ -2,12 +2,13 @@
 
 exports[`Markdown matches snapshot 1`] = `
 <div
-  className="prose "
+  className="prose"
 >
   <h1>
     Test
   </h1>
   <pre
+    className="border !rounded-2xl !py-5 !bg-gray-50 shadow-lg"
     style={
       Object {
         "MozHyphens": "none",
@@ -63,54 +64,73 @@ exports[`Markdown matches snapshot 1`] = `
       }
     >
       <span
-        className="token"
-        style={
-          Object {
-            "color": "hsl(350, 40%, 70%)",
-          }
-        }
-      >
-        const
-      </span>
-      <span
         style={Object {}}
       >
-         k 
-      </span>
-      <span
-        className="token"
-        style={
-          Object {
-            "color": "hsl(40, 90%, 60%)",
+        <span
+          className="linenumber react-syntax-highlighter-line-number"
+          style={
+            Object {
+              "color": "hsl(30, 20%, 50%)",
+              "display": "inline-block",
+              "minWidth": "1.25em",
+              "paddingRight": "1em",
+              "textAlign": "right",
+              "userSelect": "none",
+            }
           }
-        }
-      >
-        =
-      </span>
-      <span
-        style={Object {}}
-      >
-         
-      </span>
-      <span
-        className="token"
-        style={
-          Object {
-            "color": "hsl(350, 40%, 70%)",
+        >
+          1
+        </span>
+        <span
+          className="token"
+          style={
+            Object {
+              "color": "hsl(350, 40%, 70%)",
+            }
           }
-        }
-      >
-        1
-      </span>
-      <span
-        className="token"
-        style={
-          Object {
-            "Opacity": ".7",
+        >
+          const
+        </span>
+        <span
+          style={Object {}}
+        >
+           k 
+        </span>
+        <span
+          className="token"
+          style={
+            Object {
+              "color": "hsl(40, 90%, 60%)",
+            }
           }
-        }
-      >
-        ;
+        >
+          =
+        </span>
+        <span
+          style={Object {}}
+        >
+           
+        </span>
+        <span
+          className="token"
+          style={
+            Object {
+              "color": "hsl(350, 40%, 70%)",
+            }
+          }
+        >
+          1
+        </span>
+        <span
+          className="token"
+          style={
+            Object {
+              "Opacity": ".7",
+            }
+          }
+        >
+          ;
+        </span>
       </span>
     </code>
   </pre>
@@ -136,6 +156,8 @@ exports[`Markdown matches snapshot 1`] = `
   <p>
     <a
       href="https://github.com/"
+      rel="noreferrer"
+      target="_blank"
     >
       test
     </a>

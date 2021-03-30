@@ -8,8 +8,10 @@ const Wrapper = tw.section`
   xl:prose-lg print:prose-sm
 `;
 
+type AProps = React.DetailedHTMLProps<React.AnchorHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement>;
+
 const components = {
-  a: ({ href, children }) => <a href={href} target="_blank" rel="noreferrer">{children}</a>,
+  a: ({ href, children }: AProps) => <a href={href} target="_blank" rel="noreferrer">{children}</a>,
 };
 
 const MdxTemplate: React.FC<React.PropsWithChildren<any>> = ({ children }) => (
