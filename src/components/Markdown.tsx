@@ -59,6 +59,8 @@ export const Markdown: React.FC<Props> = ({ className, children, allowDangerousH
         {value}
       </SyntaxHighlighter>
     ),
+    link: ({ href, children: c }) => <a href={href} target="_blank" rel="noreferrer">{c}</a>,
+    linkReference: ({ href, children: c }) => <a href={href} target="_blank" rel="noreferrer">{c}</a>,
   };
 
   const plugins = [

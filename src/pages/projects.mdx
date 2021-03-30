@@ -2,20 +2,12 @@ import Undraw from "../components/svg/undraw"
 import MdxTemplate from 'templates/MdxTemplate';
 
 
-<div className="flex justify-center w-full h-64">
-    <Undraw name="proud_coder" className="h-64" />
+<div className="flex space-x-10 items-center w-full">
+<Undraw name="proud_coder" className="h-48" />
+
+# FOS Projects
+
 </div>
-
-# General Dev Projects
-
-- [lydiamichelle.art](https://lydiamichelle.art/)
-    - The personal website for my fiancé, built with Next.js.
-    - The [github repository](https://github.com/m50/lydiamichelle.com) is publicly accessible,
-        however it is not free licensed.
-- This website
-    - Also built with Next.js.
-
-# OSS Projects
 
 ## What I have contributed to
 
@@ -44,8 +36,23 @@ import MdxTemplate from 'templates/MdxTemplate';
 - [Godot C# Node/Resource Export](https://github.com/m50/Godot-CSharp-Node-Exports)
     - A set attributes and a plugin for exporting custom Nodes and Resources made in C#.
     - Replicates the GDScript `class_name` functionality in Godot.
-- [ElephantMFA](https://github.com/elephantmfa/framework) (Work in Progress/Abandoned)
-    - This is a framework for creating mail filters using PHP.
-    - Based on Laravel and ReactPHP.
+
+<div className="flex space-x-10 items-center w-full mt-20">
+<Undraw name="completing" className="h-48" />
+
+<section>
+
+# Open Source but not Free
+
+These are works that have publicly accessible repositories, but are not free licensed.
+
+</section>
+</div>
+
+- [lydiamichelle.art](https://lydiamichelle.art/) ([Github repository](https://github.com/m50/lydiamichelle.com))
+    - The personal website for my fiancé, built with Next.js.
+- [This website](https://clardy.eu/) ([Github repository](https://github.com/m50/clardy.eu))
+    - My personal website, built with Next.js.
+
 
 export default ({ children }) => <MdxTemplate>{children}</MdxTemplate>;
