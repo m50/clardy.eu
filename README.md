@@ -18,3 +18,12 @@ https://clardy.eu - My website
 - [Zondicons](http://www.zondicons.com/)
 - [Github Flavoured Markdown for Tailwind](https://github.com/iandinwoodie/github-markdown-tailwindcss)
 - [Illustrations by Undraw](https://undraw.co/)
+
+## License and Copyright
+
+All rights reserved.
+
+© Copyright for the website and all related code belongs to Marisa Clardy.
+Only those with write access to this repository may use or redistribute anything within the
+repository without express permission, except for in the cases of utilities or artwork as
+described in the above section.
