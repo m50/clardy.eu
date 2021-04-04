@@ -1,6 +1,7 @@
 [build]
   command = "yarn build"
   publish = "out"
+  ignore = "git status | grep 'On branch dependabot'"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
