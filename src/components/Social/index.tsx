@@ -1,4 +1,5 @@
 import * as React from 'react';
+import tw from 'tailwind-styled-components';
 import Github from './Github';
 import Gitlab from './Gitlab';
 import Instagram from './Instagram';
@@ -14,10 +15,23 @@ const socials: JSX.Element[] = [
   <DevTo />,
 ];
 
-const Social: React.FC = () => (
-  <ul className="print:hidden flex-grow flex justify-between py-3 h-5 content-center items-center">
-    {socials.map((S, idx: number) => <li className="list-none !my-0" key={idx}>{S}</li>)}
-  </ul>
+const Container = tw.ul`
+  flex-grow flex justify-between py-3 content-center items-center
+  print:hidden
+`;
+
+const Item = tw.li`
+  list-none !my-0 flex justify-center items-center
+`;
+
+interface Props {
+  className?: string;
+}
+
+const Social: React.FC<Props> = ({ className }) => (
+  <Container className={className}>
+    {socials.map((S, idx: number) => <Item key={idx}>{S}</Item>)}
+  </Container>
 );
 
 export default Social;

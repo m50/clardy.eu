@@ -3,13 +3,13 @@ import { cl } from 'lib/helpers';
 import Social from './Social';
 
 const Footer: React.FC = () => (
-  <footer className="print:hidden w-full static py-10 border-t border-gray-400">
+  <footer className="print:hidden w-full static py-10 border-t border-yellow-400 bg-black text-white">
     <div className="flex flex-col md:flex-row justify-center content-center items-center w-full">
       <div className="px-10 text-center md:text-left">
         <ul>
           <li>&copy; Marisa Clardy 2020</li>
           <li>
-            <a className="text-indigo-400 no-underline hover:underline" href="mailto:marisa@clardy.eu">
+            <a className="text-yellow-400 no-underline hover:underline" href="mailto:marisa@clardy.eu">
               marisa@clardy.eu
             </a>
           </li>
@@ -17,11 +17,17 @@ const Footer: React.FC = () => (
       </div>
     </div>
     <div className={cl`
-        w-1/2 md:w-1/4 border border-gray-400 text-gray-600 h-8 p-5 mt-10
+        border border-yellow-400 p-2 w-1/2 md:w-1/4 mt-10
         mx-auto flex justify-between content-center items-center
       `}
     >
-      <Social />
+      <div className={cl`
+          w-full border border-yellow-400 h-8 p-5 text-yellow-400
+          flex justify-between content-center items-center
+        `}
+      >
+        <Social />
+      </div>
     </div>
   </footer>
 );

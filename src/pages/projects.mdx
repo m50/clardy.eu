@@ -1,9 +1,8 @@
-import Undraw from "../components/svg/undraw"
 import MdxTemplate from 'templates/MdxTemplate';
 
+export default ({ children }) => <MdxTemplate>{children}</MdxTemplate>;
 
 <div className="flex space-x-10 items-center w-full">
-<Undraw name="proud_coder" className="h-48" />
 
 # FOS Projects
 
@@ -38,7 +37,6 @@ import MdxTemplate from 'templates/MdxTemplate';
     - Replicates the GDScript `class_name` functionality in Godot.
 
 <div className="flex space-x-10 items-center w-full mt-20">
-<Undraw name="completing" className="h-48" />
 
 <section>
 
@@ -54,5 +52,3 @@ These are works that have publicly accessible repositories, but are not free lic
 - [This website](https://clardy.eu/) ([Github repository](https://github.com/m50/clardy.eu))
     - My personal website, built with Next.js.
 
-
-export default ({ children }) => <MdxTemplate>{children}</MdxTemplate>;

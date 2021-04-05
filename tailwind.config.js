@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
   future: {
     purgeLayersByDefault: true,
@@ -11,6 +13,17 @@ module.exports = {
       screens: {
         print: { raw: 'print' },
         '2xl': '1700px',
+      },
+      fontFamily: {
+        sans: [
+          'Montserrat', ...defaultTheme.fontFamily.sans,
+        ],
+        header: [
+          'Young20s', 'Train One',
+        ],
+        subheader: [
+          'Train One',
+        ],
       },
     },
     fontSize: {
@@ -26,22 +39,6 @@ module.exports = {
       '5xl': '3rem',
       '6xl': '4rem',
       '7xl': '5rem',
-    },
-    fontFamily: {
-      sans: [
-        'Raleway', 'Noto Sans', 'Roboto', 'Helvetica Neue', 'Segoe UI',
-        'Arial', 'Apple Color Emoji',
-        'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji', 'sans-serif',
-      ],
-      serif: [
-        'Georgia', 'Cambria', 'Times New Roman', 'Times', 'serif',
-      ],
-      mono: [
-        'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace',
-      ],
-      welcome: [
-        'Kalam',
-      ],
     },
   },
   variants: {

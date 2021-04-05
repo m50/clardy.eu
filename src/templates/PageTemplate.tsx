@@ -6,7 +6,7 @@ const mainClasses = cl`
   md:mx-auto xl:w-5/6 2xl:w-1/2
   print:font-serif print:my-0
 `;
-const DefaultLayout: React.FC<React.PropsWithChildren<any>> = ({ children }) => (
+const PageTemplate: React.FC<React.PropsWithChildren<any>> = ({ children }) => (
   <main aria-label="Content" className={mainClasses}>
     <div className="mx-5">
       {children}
@@ -14,4 +14,4 @@ const DefaultLayout: React.FC<React.PropsWithChildren<any>> = ({ children }) => 
   </main>
 );
 
-export default DefaultLayout;
+export default PageTemplate;

@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Kalam|Noto+Sans|Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,600;0,800;1,200;1,400;1,600;1,800&family=Train+One&display=swap');
+@font-face {
+    font-family: 'Young20s';
+    font-display: swap;
+    src: url('/assets/Young 20s.otf');
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -27,21 +32,6 @@
     .prose ol > li::before {
         display: none;
     }
-}
-
-.bg-gradient {
-    background-image: linear-gradient(theme(colors.indigo.400), transparent);
-}
-
-/* Github flavoured markdown, thanks to: https://github.com/iandinwoodie/github-markdown-tailwindcss */
-
-.prose h1,
-.prose h2,
-.prose h3,
-.prose h4,
-.prose h5,
-.prose h6 {
-    @apply border-b;
 }
 
 .prose code {

@@ -24,6 +24,16 @@ module.exports = withMDX({
 			loader: 'frontmatter-markdown-loader',
 			options: { mode: ['react-component'] },
 		});
+		config.module.rules.push({
+			test: /\.(woff(2)?|ttf|eot|otf)$/,
+			loader: 'file-loader',
+			options: {
+				name: '[name].[ext]',
+				outputPath: 'fonts/',
+			},
+		});
+
+
 		if (NODE_ENV === 'production' && SENTRY_ORG && SENTRY_PROJECT && SENTRY_AUTH_TOKEN) {
 			config.plugins.push(new SentryWebpackPlugin({
 				include: '.next',

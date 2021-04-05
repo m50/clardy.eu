@@ -3,7 +3,7 @@ import { ReactComponent as InstragramIcon } from '../svg/instagram.svg';
 
 const Instagram: React.FC<{}> = () => (
   <a rel="me"
-    className="hover:text-indigo-800"
+    className="hover:text-yellow-600"
     href="https://www.instagram.com/marisaclardy1"
     title="instagram"
   >

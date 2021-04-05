@@ -1,14 +1,13 @@
 import * as React from 'react';
-import Header from 'components/Header';
-import Footer from 'components/Footer';
+import { BgGradient } from 'components/styled/BgGradient';
+import Nav from 'components/Nav';
 
 const DefaultTemplate: React.FC<React.PropsWithChildren<any>> = ({ children }) => (
-  <div className="flex justify-between flex-col min-h-screen bg-gray-50">
-    <div>
-      <Header />
+  <div className="flex justify-between flex-col min-h-screen bg-black">
+    <BgGradient>
+      <Nav />
       {children}
-    </div>
-    <Footer />
+    </BgGradient>
   </div>
 );
 
