@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Link from 'next/link';
 import PageTemplate from 'templates/PageTemplate';
-import Undraw from 'components/svg/undraw';
 import { getAllPosts } from 'lib/node-only/posts';
 import { Post } from 'collections/posts/post';
 import { GetStaticProps } from 'next';
@@ -14,7 +13,6 @@ const Blog: React.FunctionComponent<Props> = ({ posts }: Props) => (
   <PageTemplate>
     <div className="mx-2 md:mx-10 mb-10">
       <section className="flex justify-between h-64 items-center">
-        <Undraw name="updated" className="h-full p-5" />
         <h1 className="text-4xl bold mb-5 w-full border-b border-gray-300">Recent posts</h1>
       </section>
       <ul className="flex flex-wrap justify-start">
