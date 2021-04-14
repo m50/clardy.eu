@@ -3,9 +3,8 @@ pull_request_rules:
     conditions:
       - label=dependencies
       - check-success=Analyze (javascript)
-      - check-success=Run Unit Tests
-      - check-success=Lint
-      - check-success=Typecheck
+      - check-success=ES Lint
+      - check-success=Type Check
       - check-success=Test Build
     actions:
       merge:
