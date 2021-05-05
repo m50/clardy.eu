@@ -1,6 +1,7 @@
 import Social from 'components/Social';
 import MdxTemplate from 'templates/MdxTemplate';
 import Gravatar from 'components/Gravatar';
+import { Tag } from 'components/Tag';
 
 export default ({ children }) => <MdxTemplate>{children}</MdxTemplate>;
 
@@ -12,10 +13,10 @@ export default ({ children }) => <MdxTemplate>{children}</MdxTemplate>;
     <span className="print:hidden inline-block">Resumé/CV</span>
   </h1>
   <Social />
-  <div className="hidden print:flex font-mono justify-around w-full text-xs">
-    <span><b>e:</b>marisa@clardy.eu</span>
-    <span><b>t:</b>512-228-4291</span>
-    <span><b>w:</b>https://clardy.eu</span>
+  <div className="hidden print:flex font-mono justify-around w-full text-xs -mt-5">
+    <span className="px-2"><b>e:</b>marisa@clardy.eu</span>
+    <span className="px-2"><b>t:</b>512-228-4291</span>
+    <span className="px-2"><b>w:</b>https://clardy.eu</span>
   </div>
   </div>
 </div>
@@ -30,69 +31,65 @@ game development and game AI.
 
 <!-- <div className="hidden print:block" style="page-break-after: always;">{' '}</div> -->
 
-## Skills and Abilities
+## Skill Cloud
 
-<div className="print:block flex flex-col md:flex-row justify-around">
-<div className="inline-block height-full align-top">
-
-### Programming
-
-- TypeScript / JavaScript
-  - React / VueJS / NodeJS
-  - Next.js / Gatsby.js
-- PHP / Laravel / Amphp / ReactPHP
-- C#
-- Bash
-- HTML / CSS / SCSS / TailwindCSS
-- Kotlin / Java
-- Go
-- Python
-
-</div>
-<div className="inline-block height-full align-top">
-
-### Other Skills/Tools
-
-- Docker
-- Terraform
-- Git / Github / Gitlab
-- CI/CD
-  - Github Actions / Gitlab CI/CD
-- AWS / Vercel / Netlify
-- Databases
-  - PostgreSQL / MySQL
-- Caches and Message Queues
-  - Redis / RabbitMQ
-
-</div>
+<div className="flex flex-wrap justify-center text-sm">
+  <Tag color="blue" className="m-2">TypeScript</Tag>
+  <Tag color="yellow" className="m-2">JavaScript</Tag>
+  <Tag className="m-2">React</Tag>
+  <Tag className="m-2">VueJS</Tag>
+  <Tag className="m-2">NodeJS</Tag>
+  <Tag className="m-2">Next.js</Tag>
+  <Tag className="m-2">Gatsby</Tag>
+  <Tag color="purple" className="m-2">PHP</Tag>
+  <Tag color="orange" className="m-2">Laravel</Tag>
+  <Tag className="m-2">Amphp</Tag>
+  <Tag className="m-2">Reactphp</Tag>
+  <Tag className="m-2">C#</Tag>
+  <Tag className="m-2">Bash</Tag>
+  <Tag className="m-2">HTML</Tag>
+  <Tag className="m-2">CSS</Tag>
+  <Tag className="m-2">SCSS</Tag>
+  <Tag className="m-2">TailwindCSS</Tag>
+  <Tag className="m-2">Kotlin</Tag>
+  <Tag className="m-2">Java</Tag>
+  <Tag className="m-2">Go</Tag>
+  <Tag className="m-2">Python</Tag>
+  <Tag className="m-2">Docker</Tag>
+  <Tag className="m-2">Git</Tag>
+  <Tag className="m-2">Gitlab</Tag>
+  <Tag className="m-2">Github</Tag>
+  <Tag className="m-2">Github Actions</Tag>
+  <Tag className="m-2">Gitlab CI/CD</Tag>
+  <Tag className="m-2">AWS</Tag>
+  <Tag className="m-2">Vercel</Tag>
+  <Tag className="m-2">Netlify</Tag>
+  <Tag className="m-2">PostgreSQL</Tag>
+  <Tag className="m-2">MySQL</Tag>
+  <Tag className="m-2">Redis</Tag>
+  <Tag className="m-2">RabbitMQ</Tag>
 </div>
 
 ## Work Experience
 
-- **Pagely**
-  - Positions:
-    - *Software Enginer* (February 2021 - Present)
-      - Developer on PHP Microservices and React Front-end.
+- **Pagely** - *Software Enginer* (February 2021 - Present)
+  - Developer on PHP Microservices and React Front-end.
 
-- **Happy Money**
-  - Positions:
-    - *Software Engineer* (October 2020 - February 2021)
-      - Salesforce Developer on Loan Origination platform.
-      - CI/CD work to modernize workflows for deployment to Salesforce.
+- **Happy Money** - *Software Engineer* (October 2020 - February 2021)
+  - Salesforce Developer on Loan Origination platform.
+  - CI/CD work to modernize workflows for deployment to Salesforce.
 
-- **TitanHQ**
-  - Positions:
-    - *Senior Developer* (May 2018 - October 2020)
-      - Lead developer on [SpamTitan](https://www.spamtitan.com/)
+- **TitanHQ** - *Senior Developer* (May 2018 - October 2020)
+  - Lead developer on [SpamTitan](https://www.spamtitan.com/)
 
-        > SpamTitan is a globally deployed Enterprise grade malware and spam filtering product
-        > with millions of users world wide.
-        > My work on it includes leading the API development, modernization of the tooling
-        > and mentoring the more senior engineers in the company on these modern tools,
-        > and advancements in the feature set of the product. Modernized the CI/CD dev flow
-        > to utilize docker, in a move towards a containerized environment for the product.
-    - *Support Engineer* (May 2016 - May 2018)
-      - Achievement: Developed a number of internal systems for the company.
+    > SpamTitan is a globally deployed Enterprise grade malware and spam filtering product
+    > with millions of users world wide.
+    > My work on it includes leading the API development, modernization of the tooling
+    > and mentoring the more senior engineers in the company on these modern tools,
+    > and advancements in the feature set of the product. Modernized the CI/CD dev flow
+    > to utilize docker, in a move towards a containerized environment for the product.
+- **TitanHQ** - *Support Engineer* (May 2016 - May 2018)
+  - Achievement: Developed a number of internal systems for the company.
 
 ## Education
 
