@@ -2589,7 +2589,7 @@ cjs-module-lexer@^1.0.0:
   resolved "https://registry.yarnpkg.com/cjs-module-lexer/-/cjs-module-lexer-1.2.1.tgz#2fd46d9906a126965aa541345c499aaa18e8cd73"
   integrity sha512-jVamGdJPDeuQilKhvVn1h3knuMOZzr8QDnpk+M9aMlCaMkTDd6fBWPhiDqFvFZ07pL0liqabAiuy8SY4jGHeaw==
 
-classnames@2.2.6, classnames@^2.2.6:
+classnames@2.2.6:
   version "2.2.6"
   resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
   integrity sha512-JR/iSQOSt+LQIWwrwEzJ9uk0xfN3mTVYMwt1Ir5mUcSN6pU+V4zQFFaJsclJbPuAUQH+yfWef6tm7l1quW3C8Q==
@@ -2633,6 +2633,11 @@ clone@^1.0.2:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/clone/-/clone-1.0.4.tgz#da309cc263df15994c688ca902179ca3c7cd7c7e"
   integrity sha1-2jCcwmPfFZlMaIypAheco8fNfH4=
+
+clsx@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/clsx/-/clsx-1.1.1.tgz#98b3134f9abbdf23b2663491ace13c5c03a73188"
+  integrity sha512-6/bPho624p3S2pMyvP5kKBPXnI3ufHLObBFCfgx+LkeR5lg2XYy2hqZqUf45ypD8COn2bhgGJSUE+l5dhNBieA==
 
 co@^4.6.0:
   version "4.6.0"
@@ -2716,17 +2721,12 @@ comma-separated-tokens@^1.0.0:
   resolved "https://registry.yarnpkg.com/comma-separated-tokens/-/comma-separated-tokens-1.0.8.tgz#632b80b6117867a158f1080ad498b2fbe7e3f5ea"
   integrity sha512-GHuDRO12Sypu2cV70d1dkA2EUmXHgntrzbpvOB+Qy+49ypNfGgFQIC2fhhXbnyrJRynDCAARsT7Ou0M6hirpfw==
 
-commander@^5.1.0:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/commander/-/commander-5.1.0.tgz#46abbd1652f8e059bddaef99bbdcb2ad9cf179ae"
-  integrity sha512-P0CysNDQ7rtVw4QIQtm+MRxV66vKFSvlsQvGYXZWR3qFU0jlMKHZZZgw8e+8DSah4UDKMqnknRDQz+xuQXQ/Zg==
-
 commander@^6.0.0:
   version "6.2.1"
   resolved "https://registry.yarnpkg.com/commander/-/commander-6.2.1.tgz#0792eb682dfbc325999bb2b84fddddba110ac73c"
   integrity sha512-U7VdrJFnJgo4xjrHpTzu0yrHPGImdsmD95ZlgYSEajAn2JKzDhDTPG9kBTefmObL2w/ngeZnilk+OV9CG3d7UA==
 
-commander@^7.1.0:
+commander@^7.0.0, commander@^7.1.0:
   version "7.2.0"
   resolved "https://registry.yarnpkg.com/commander/-/commander-7.2.0.tgz#a36cb57d0b501ce108e4d20559a150a391d97ab7"
   integrity sha512-QrWXB+ZQSVPmIWIhtEO9H+gwHaMGYiF5ChvoJ+K9ZGHG/sVsa6yiesAD1GC/x46sET00Xlwo1u49RVVVzvcSkw==
@@ -7437,22 +7437,22 @@ table@^6.0.9:
     string-width "^4.2.0"
     strip-ansi "^6.0.0"
 
-tailwind-styled-components@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/tailwind-styled-components/-/tailwind-styled-components-2.0.2.tgz#69051d891ebe2bf368ac7d2d46b699d662866260"
-  integrity sha512-DyBoBd9phETkhc8Eb7T4wWLdEmK/nUf6O1AnfWNXRU/7S0KliHjHmRwBLqLFsuvIE+JtuCu2pBIMgXhCfBgXZA==
+tailwind-styled-components@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/tailwind-styled-components/-/tailwind-styled-components-2.0.3.tgz#79ac92cf53a61be6869bc18e12ab0e544c3e9b00"
+  integrity sha512-rACYE4Vl0vJSQ8d8jB1xfjoaSwO6cW+6BFgG4SY1cSitnah3kRwwW/rtIT939tNysvT66RWSIL9ttSOHJ1cdbg==
   dependencies:
     react "^17.0.1"
-    tailwindcss-classnames "^1.9.0"
+    tailwindcss-classnames "^2.1.2"
 
-tailwindcss-classnames@^1.9.0:
-  version "1.9.0"
-  resolved "https://registry.yarnpkg.com/tailwindcss-classnames/-/tailwindcss-classnames-1.9.0.tgz#68f142649a0f1dbff8c121a2c5d21c886637ea8d"
-  integrity sha512-TiEP4a4X6yyGMIUkJi2YxXgPZsWz4RXwyo3EVaTHTYqoRj5PqbSlUS4B57g3sikmR6vhovz0t/R23J3IulxdXw==
+tailwindcss-classnames@^2.1.2:
+  version "2.1.3"
+  resolved "https://registry.yarnpkg.com/tailwindcss-classnames/-/tailwindcss-classnames-2.1.3.tgz#11226b451381ac3a337e8a119827d84cc698f6a0"
+  integrity sha512-Cl5e16Komh2rbjCJTSKOKcjoWcwmJZQ+//ba5F3YAjVKZlEk4kuloGGxHKKWoWNS/9Z5g29y1zuEYM0ryIhF/A==
   dependencies:
-    classnames "^2.2.6"
+    clsx "^1.1.1"
     colors "^1.4.0"
-    commander "^5.1.0"
+    commander "^7.0.0"
     inquirer "^7.1.0"
     lodash "^4.17.15"
     tslib "^2.0.0"
