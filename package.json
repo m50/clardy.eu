@@ -69,7 +69,7 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "jest": "^27.0.6",
     "msw": "^0.32.2",
-    "postcss": "^8.3.5",
+    "postcss": "^8.3.6",
     "prettier": "^2.3.2",
     "react-test-renderer": "^17.0.2",
     "tailwindcss": "^2.1.4",
