@@ -2,6 +2,7 @@ import Social from 'components/Social';
 import MdxTemplate from 'templates/MdxTemplate';
 import Gravatar from 'components/Gravatar';
 import { Tag } from 'components/Tag';
+import { Shuffle } from 'components/Shuffle';
 
 export default ({ children }) => <MdxTemplate>{children}</MdxTemplate>;
 
@@ -33,7 +34,7 @@ game development and game AI.
 
 ## Skill Cloud
 
-<div className="flex flex-wrap justify-center text-sm">
+<Shuffle className="flex flex-wrap justify-center text-sm">
   <Tag color="blue" className="m-2">TypeScript</Tag>
   <Tag color="yellow" className="m-2">JavaScript</Tag>
   <Tag className="m-2">React</Tag>
@@ -80,7 +81,7 @@ game development and game AI.
   <Tag className="m-2">Godot</Tag>
   <Tag className="m-2">Micro Frameworks</Tag>
   <Tag className="m-2">Static Analysis</Tag>
-</div>
+</Shuffle>
 
 ## Work Experience
 
