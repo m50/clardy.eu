@@ -34,7 +34,7 @@
     "remark-gfm": "^1.0.0",
     "remark-slug": "^7.0.1",
     "remark-toc": "^8.0.1",
-    "slugify": "^1.6.4",
+    "slugify": "^1.6.5",
     "tailwind-styled-components": "^2.0.3"
   },
   "devDependencies": {
