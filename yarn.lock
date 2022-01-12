@@ -7433,10 +7433,10 @@ table@^6.0.9:
     string-width "^4.2.0"
     strip-ansi "^6.0.0"
 
-tailwind-styled-components@^2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/tailwind-styled-components/-/tailwind-styled-components-2.0.3.tgz#79ac92cf53a61be6869bc18e12ab0e544c3e9b00"
-  integrity sha512-rACYE4Vl0vJSQ8d8jB1xfjoaSwO6cW+6BFgG4SY1cSitnah3kRwwW/rtIT939tNysvT66RWSIL9ttSOHJ1cdbg==
+tailwind-styled-components@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/tailwind-styled-components/-/tailwind-styled-components-2.0.4.tgz#bad44245b72df6407740581536ee532373607028"
+  integrity sha512-Ngmr/9dAn7ATSYLDHrKGJbls/shGdiH5fXr2+ZRViR2L4VQVt5NGbsDi5Xjl1s53zzsFl9Yg3a0WsuWHrnxwGw==
   dependencies:
     react "^17.0.1"
     tailwindcss-classnames "^2.1.2"
