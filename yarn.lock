@@ -6510,10 +6510,10 @@ table@^6.0.9:
     string-width "^4.2.0"
     strip-ansi "^6.0.0"
 
-tailwind-styled-components@^2.1.2:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/tailwind-styled-components/-/tailwind-styled-components-2.1.2.tgz#46cd5561b7b6a1b9f36c4a23a6617aaa99a2cd34"
-  integrity sha512-HckkG7MbW1y6JvZcgKFX+Rd75Aewv6Ijwxnl1pop3xLKmTwTLTC75ZacSO0pbElOoqmfPg1VnMXDKPitdpNHcw==
+tailwind-styled-components@^2.1.4:
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/tailwind-styled-components/-/tailwind-styled-components-2.1.4.tgz#9f3c20cac8ef80df2c170c2c28a9607d6b6c690a"
+  integrity sha512-iys+YwzuDf1V0tDI4epBvGBkYq4v12IUC3pWFfgTS5AMG+wnyCVR4mlAy9c0b6owgVLAbttruQeAiJQiBJybKQ==
   dependencies:
     tailwindcss-classnames "^3.0.1"
 

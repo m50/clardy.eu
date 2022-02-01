@@ -35,7 +35,7 @@
     "remark-slug": "^7.0.1",
     "remark-toc": "^8.0.1",
     "slugify": "^1.6.5",
-    "tailwind-styled-components": "^2.1.2"
+    "tailwind-styled-components": "^2.1.4"
   },
   "devDependencies": {
     "@babel/core": "^7.16.12",
