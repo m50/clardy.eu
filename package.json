@@ -30,7 +30,7 @@
     "react": "^17",
     "react-dom": "^17",
     "react-markdown": "^5.0.3",
-    "react-syntax-highlighter": "^15.4.5",
+    "react-syntax-highlighter": "^15.5.0",
     "remark-gfm": "^1.0.0",
     "remark-slug": "^7.0.1",
     "remark-toc": "^8.0.1",
@@ -38,10 +38,10 @@
     "tailwind-styled-components": "^2.1.4"
   },
   "devDependencies": {
-    "@babel/core": "^7.17.5",
+    "@babel/core": "^7.17.7",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-typescript": "^7.16.7",
-    "@babel/runtime": "^7.17.2",
+    "@babel/runtime": "^7.17.7",
     "@jest/types": "^27.2.4",
     "@sentry/webpack-plugin": "^1.18.8",
     "@tailwindcss/custom-forms": "^0.2.1",
