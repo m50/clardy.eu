@@ -22,7 +22,7 @@
     "@headlessui/react": "^1.6.0",
     "@mdx-js/loader": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
-    "@next/mdx": "^12.1.5",
+    "@next/mdx": "^12.1.6",
     "@sentry/react": "^6.3.0",
     "@sentry/tracing": "^6.3.0",
     "gray-matter": "^4.0.3",
@@ -38,7 +38,7 @@
     "tailwind-styled-components": "^2.1.7"
   },
   "devDependencies": {
-    "@babel/core": "^7.17.9",
+    "@babel/core": "^7.17.12",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-typescript": "^7.16.7",
     "@babel/runtime": "^7.17.9",
