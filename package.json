@@ -24,7 +24,7 @@
     "@mdx-js/react": "^1.6.22",
     "@next/mdx": "^14.0.1",
     "@sentry/react": "^6.3.0",
-    "@sentry/tracing": "^6.3.0",
+    "@sentry/tracing": "^7.92.0",
     "gray-matter": "^4.0.3",
     "next": "^12",
     "react": "^17",
