@@ -34,6 +34,8 @@ module.exports = {
     'tsx',
     'jsx'
   ],
-  testURL: 'http://localhost',
   snapshotResolver: '<rootDir>/snapshotResolver.js',
+  testEnvironmentOptions: {
+    url: 'http://localhost',
+  }
 };

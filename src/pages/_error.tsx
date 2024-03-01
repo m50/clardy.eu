@@ -7,9 +7,7 @@ interface ErrorProps {
   err: Error;
 }
 
-const MyError: NextPage<ErrorProps> = ({ statusCode, err }) => {
-  return <NextError statusCode={statusCode} />;
-};
+const MyError: NextPage<ErrorProps> = ({ statusCode }) => <NextError statusCode={statusCode} />;
 
 MyError.getInitialProps = ({ res, err }) => {
   let statusCode = 500;
