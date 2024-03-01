@@ -4,7 +4,7 @@ const withMDX = require('@next/mdx')({
     rehypePlugins: [],
   },
 })
-const { CONTEXT } = process.env;
+const { NODE_ENV, CONTEXT } = process.env;
 
 require('./prepare');
 
