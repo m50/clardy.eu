@@ -23,7 +23,7 @@ const IndexPage = () => (
         <Paragraph>
           <SectionHeader>I currently work as</SectionHeader> a software enginer at{' '}
           <Pagely aria-label="pagely" className="h-5 inline-block" style={{ fill: '#0f4f72' }} />,{' '}
-          working on PHP microservices and a React front-end.
+          a GoDaddy Company, working on PHP microservices to manage WordPress hosting.
         </Paragraph>
       </Section>
       <Section>
@@ -55,8 +55,8 @@ const IndexPage = () => (
         <Undraw name="outside" className="w-full md:w-1/3 p-5 h-full" />
         <Paragraph>
           <SectionHeader>Outside of the tech sphere</SectionHeader>
-          I have a passion for board games, love to travel and
-          see new things.
+          I have a passion for board games, kayaking and travelling.
+          New Experiences make the world go 'round.
         </Paragraph>
       </Section>
     </Main>

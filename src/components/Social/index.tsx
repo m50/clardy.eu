@@ -1,17 +1,13 @@
 import * as React from 'react';
 import Github from './Github';
-import Gitlab from './Gitlab';
-import Instagram from './Instagram';
-import Twitter from './Twitter';
-import DevTo from './DevTo';
+// import Gitlab from './Gitlab';
+// import Instagram from './Instagram';
+// import Twitter from './Twitter';
+// import DevTo from './DevTo';
 
 // eslint-disable-next-line no-undef
 const socials: JSX.Element[] = [
-  <Twitter />,
   <Github />,
-  <Gitlab />,
-  <Instagram />,
-  <DevTo />,
 ];
 
 const Social: React.FC = () => (

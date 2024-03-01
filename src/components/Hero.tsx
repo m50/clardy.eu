@@ -15,7 +15,7 @@ const Hero = () => (
         Hi, I'm Marisa!
       </h1>
       <h2 className="mt-5 text-xl lg:text-4xl max-w-lg text-center lg:text-left">
-        I'm an native Texan, LGBT, Software Developer, with a passion for constant learning.
+        I am a native Texan, LGBTQ+, Software Developer, living and loving life in the Netherlands.
       </h2>
     </div>
     <div className="mt-10 md:mt-0 md:ml-10">
