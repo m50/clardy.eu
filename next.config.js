@@ -1,11 +1,9 @@
-const SentryWebpackPlugin = require('@sentry/webpack-plugin');
 const withMDX = require('@next/mdx')({
   options: {
     remarkPlugins: [],
     rehypePlugins: [],
   },
 })
-const { SENTRY_ORG, SENTRY_PROJECT, SENTRY_AUTH_TOKEN, NODE_ENV } = process.env;
 const { CONTEXT } = process.env;
 
 require('./prepare');

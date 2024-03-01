@@ -11,14 +11,6 @@ updates:
   labels:
   - dependencies
   ignore:
-  - dependency-name: "@sentry/tracing"
-    versions:
-    - 6.3.1
-    - 6.3.3
-  - dependency-name: "@sentry/react"
-    versions:
-    - 6.3.1
-    - 6.3.3
   - dependency-name: "@types/node"
     versions:
     - 15.0.0

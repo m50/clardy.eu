@@ -4,7 +4,6 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/0138ede1-1d4b-4f41-b6f8-e6e8b3003d23/deploy-status)](https://app.netlify.com/sites/marisa-clardy/deploys)
 [![Insights](https://img.shields.io/badge/analytics-getinsights.io-blue)](https://getinsights.io/dashboard)
-[![Sentry](https://img.shields.io/badge/error%20tracking-sentry.io-red)](https://sentry.io/organizations/marisa/issues/?project=5671037)
 
 https://clardy.eu - My website
 
@@ -13,7 +12,6 @@ https://clardy.eu - My website
 - [Netlify for hosting](https://www.netlify.com/)
     - [Netlify NextJS Plugin](https://github.com/netlify/netlify-plugin-nextjs)
 - [Next.js](https://www.nextjs.org)
-- [Sentry](https://sentry.io/)
 - [GetInsights](https://getinsights.io/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Heroicons-ui](https://github.com/sschoger/heroicons-ui)
