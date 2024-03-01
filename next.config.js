@@ -24,16 +24,6 @@ module.exports = withMDX({
 			loader: 'frontmatter-markdown-loader',
 			options: { mode: ['react-component'] },
 		});
-		if (NODE_ENV === 'production' && SENTRY_ORG && SENTRY_PROJECT && SENTRY_AUTH_TOKEN) {
-			config.plugins.push(new SentryWebpackPlugin({
-				include: '.next',
-				ignore: ['node_modules'],
-				urlPrefix: "~/_next",
-				stripPrefix: ['webpack://_N_E/'],
-				ext: ['js', 'ts', 'map', 'jsbundle'],
-				release: process.env.COMMIT_REF,
-			}));
-		}
 
 		return config;
 	},
