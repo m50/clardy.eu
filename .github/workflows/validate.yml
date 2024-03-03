@@ -7,34 +7,17 @@ on:
 jobs:
   lint:
     runs-on: ubuntu-latest
-    name: ES Lint
+    name: List, test, build
     steps:
       - uses: actions/checkout@v2
       - uses: oven-sh/setup-bun@v1
       - name: Install Modules
         run: bun install
-      - name: Run Tests
+      - name: Lint
         run: bun run lint
-
-  lint-types:
-    runs-on: ubuntu-latest
-    name: Type Check
-    steps:
-      - uses: actions/checkout@v2
-      - uses: oven-sh/setup-bun@v1
-      - name: Install Modules
-        run: bun install
-      - name: Run Tests
+      - name: Lint types
         run: bun run lint:types
-
-  build:
-    runs-on: ubuntu-latest
-    name: Test Build
-    steps:
-      - uses: actions/checkout@v2
-      - uses: oven-sh/setup-bun@v1
-      - name: Install Modules
-        run: bun install
       - name: Run Tests
+        run: bun test
+      - name: Built
         run: bun run build
-      - run: ls public
