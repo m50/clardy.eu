@@ -1,5 +1,5 @@
 [build]
-  command = "yarn build"
+  command = "bun run build"
   publish = "out"
   ignore = "git log -1 --pretty=%B | grep dependabot"
 
