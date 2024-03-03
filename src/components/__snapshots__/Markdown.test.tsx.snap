@@ -1,0 +1,255 @@
+// Bun Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Markdown matches snapshot 1`] = `
+{
+  "$$typeof": Symbol(react.test.json),
+  "children": [
+    {
+      "$$typeof": Symbol(react.test.json),
+      "children": [
+        "Test",
+      ],
+      "props": {},
+      "type": "h1",
+    },
+    {
+      "$$typeof": Symbol(react.test.json),
+      "children": [
+        {
+          "$$typeof": Symbol(react.test.json),
+          "children": [
+            {
+              "$$typeof": Symbol(react.test.json),
+              "children": [
+                {
+                  "$$typeof": Symbol(react.test.json),
+                  "children": [
+                    "1",
+                  ],
+                  "props": {
+                    "className": "linenumber react-syntax-highlighter-line-number",
+                    "style": {
+                      "color": "hsl(30, 20%, 50%)",
+                      "display": "inline-block",
+                      "minWidth": "1.25em",
+                      "paddingRight": "1em",
+                      "textAlign": "right",
+                      "userSelect": "none",
+                    },
+                  },
+                  "type": "span",
+                },
+                {
+                  "$$typeof": Symbol(react.test.json),
+                  "children": [
+                    "const",
+                  ],
+                  "props": {
+                    "className": "token",
+                    "style": {
+                      "color": "hsl(350, 40%, 70%)",
+                    },
+                  },
+                  "type": "span",
+                },
+                {
+                  "$$typeof": Symbol(react.test.json),
+                  "children": [
+                    " k ",
+                  ],
+                  "props": {
+                    "className": undefined,
+                    "style": {},
+                  },
+                  "type": "span",
+                },
+                {
+                  "$$typeof": Symbol(react.test.json),
+                  "children": [
+                    "=",
+                  ],
+                  "props": {
+                    "className": "token",
+                    "style": {
+                      "color": "hsl(40, 90%, 60%)",
+                    },
+                  },
+                  "type": "span",
+                },
+                {
+                  "$$typeof": Symbol(react.test.json),
+                  "children": [
+                    " ",
+                  ],
+                  "props": {
+                    "className": undefined,
+                    "style": {},
+                  },
+                  "type": "span",
+                },
+                {
+                  "$$typeof": Symbol(react.test.json),
+                  "children": [
+                    "1",
+                  ],
+                  "props": {
+                    "className": "token",
+                    "style": {
+                      "color": "hsl(350, 40%, 70%)",
+                    },
+                  },
+                  "type": "span",
+                },
+                {
+                  "$$typeof": Symbol(react.test.json),
+                  "children": [
+                    ";",
+                  ],
+                  "props": {
+                    "className": "token",
+                    "style": {
+                      "Opacity": ".7",
+                    },
+                  },
+                  "type": "span",
+                },
+              ],
+              "props": {
+                "className": undefined,
+                "style": {},
+              },
+              "type": "span",
+            },
+          ],
+          "props": {
+            "className": "language-js",
+            "style": {
+              "MozHyphens": "none",
+              "MozTabSize": "4",
+              "OTabSize": "4",
+              "WebkitHyphens": "none",
+              "background": "none",
+              "color": "white",
+              "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+              "fontSize": "1em",
+              "hyphens": "none",
+              "lineHeight": "1.5",
+              "msHyphens": "none",
+              "tabSize": "4",
+              "textAlign": "left",
+              "textShadow": "0 -.1em .2em black",
+              "whiteSpace": "pre",
+              "wordBreak": "normal",
+              "wordSpacing": "normal",
+              "wordWrap": "normal",
+            },
+          },
+          "type": "code",
+        },
+      ],
+      "props": {
+        "className": "border !rounded-2xl !py-5 !bg-gray-50 shadow-lg",
+        "style": {
+          "MozHyphens": "none",
+          "MozTabSize": "4",
+          "OTabSize": "4",
+          "WebkitHyphens": "none",
+          "background": "hsl(30, 20%, 25%)",
+          "border": ".3em solid hsl(30, 20%, 40%)",
+          "borderRadius": ".5em",
+          "boxShadow": "1px 1px .5em black inset",
+          "color": "white",
+          "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+          "fontSize": "1em",
+          "hyphens": "none",
+          "lineHeight": "1.5",
+          "margin": ".5em 0",
+          "msHyphens": "none",
+          "overflow": "auto",
+          "padding": "1em",
+          "tabSize": "4",
+          "textAlign": "left",
+          "textShadow": "0 -.1em .2em black",
+          "whiteSpace": "pre",
+          "wordBreak": "normal",
+          "wordSpacing": "normal",
+          "wordWrap": "normal",
+        },
+      },
+      "type": "pre",
+    },
+    {
+      "$$typeof": Symbol(react.test.json),
+      "children": [
+        {
+          "$$typeof": Symbol(react.test.json),
+          "children": [
+            "1",
+          ],
+          "props": {},
+          "type": "li",
+        },
+        {
+          "$$typeof": Symbol(react.test.json),
+          "children": [
+            "2",
+          ],
+          "props": {},
+          "type": "li",
+        },
+        {
+          "$$typeof": Symbol(react.test.json),
+          "children": [
+            "3",
+          ],
+          "props": {},
+          "type": "li",
+        },
+        {
+          "$$typeof": Symbol(react.test.json),
+          "children": [
+            {
+              "$$typeof": Symbol(react.test.json),
+              "children": null,
+              "props": {
+                "checked": false,
+                "readOnly": true,
+                "type": "checkbox",
+              },
+              "type": "input",
+            },
+            "test",
+          ],
+          "props": {},
+          "type": "li",
+        },
+      ],
+      "props": {},
+      "type": "ul",
+    },
+    {
+      "$$typeof": Symbol(react.test.json),
+      "children": [
+        {
+          "$$typeof": Symbol(react.test.json),
+          "children": [
+            "test",
+          ],
+          "props": {
+            "href": "https://github.com/",
+            "rel": "noreferrer",
+            "target": "_blank",
+          },
+          "type": "a",
+        },
+      ],
+      "props": {},
+      "type": "p",
+    },
+  ],
+  "props": {
+    "className": "prose",
+  },
+  "type": "div",
+}
+`;

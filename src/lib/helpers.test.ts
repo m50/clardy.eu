@@ -1,33 +1,33 @@
 import { slug, isClientSide, isProduction, isDeployed, isServerSide, cl } from './helpers';
 
 describe('helpers', () => {
-  test.concurrent('slug()', async () => {
+  test('slug()', async () => {
     const real = slug('Hi, how are you?');
     const expected = 'hi-how-are-you';
     expect(real).toBe(expected);
   });
 
-  test.concurrent('isClientSide()', async () => {
-    expect(isClientSide()).toBe(true);
+  test('isClientSide()', async () => {
+    expect(isClientSide()).toBe(false);
   });
 
-  test.concurrent('isServerSide()', async () => {
-    expect(isServerSide()).toBe(false);
+  test('isServerSide()', async () => {
+    expect(isServerSide()).toBe(true);
   });
 
-  test.concurrent('isProduction()', async () => {
+  test('isProduction()', async () => {
     expect(isProduction()).toBe(false);
     process.env.CONTEXT = 'production';
     expect(isProduction()).toBe(true);
   });
 
-  test.concurrent('isDeployed()', async () => {
+  test('isDeployed()', async () => {
     expect(isDeployed()).toBe(false);
     process.env.NETLIFY = 'true';
     expect(isDeployed()).toBe(true);
   });
 
-  test.concurrent('cl``', async () => {
+  test('cl``', async () => {
     const out = cl`
     test
     new
