@@ -10,7 +10,6 @@ require('./prepare');
 
 module.exports = withMDX({
 	pageExtensions: ['js', 'jsx', 'mdx', 'tsx'],
-	target: 'experimental-serverless-trace',
 	productionBrowserSourceMaps: NODE_ENV === 'production',
 	env: {
 		CONTEXT,
