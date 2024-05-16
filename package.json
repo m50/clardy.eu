@@ -47,7 +47,7 @@
     "@testing-library/react": "^12.1.5",
     "@testing-library/react-hooks": "^7.0.2",
     "@types/jest": "^29.5.7",
-    "@types/mdx-js__react": "^1.5.5",
+    "@types/mdx-js__react": "^2.0.0",
     "@types/node": "^20.8.10",
     "@types/react": "^18.0.8",
     "@types/react-syntax-highlighter": "^13.5.2",
