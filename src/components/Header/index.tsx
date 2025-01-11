@@ -5,7 +5,7 @@ import HeaderLink from './HeaderLink';
 import { Page } from './types';
 
 const pages: Page[] = [
-  { path: '/blog/', name: 'Blog' },
+  //{ path: '/blog/', name: 'Blog' },
   { path: '/cv/', name: 'Cv' },
   { path: '/projects/', name: 'Projects' },
 ];
